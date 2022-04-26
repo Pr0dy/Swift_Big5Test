@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g4V-ac-QB7">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,17 +14,23 @@
             <objects>
                 <viewController id="g4V-ac-QB7" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pql-zA-MO0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFP-tL-y6W">
-                                <rect key="frame" x="48" y="300.5" width="320" height="20.5"/>
+                                <rect key="frame" x="48" y="262" width="296" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Counter" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCU-ZD-3yB">
+                                <rect key="frame" x="48" y="114.00000000000001" width="160" height="52.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="cc8-oB-ENN">
-                                <rect key="frame" x="77" y="381" width="260" height="331"/>
+                                <rect key="frame" x="65" y="342.33333333333331" width="260" height="330.99999999999994"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0v-OM-uMi">
                                         <rect key="frame" x="0.0" y="0.0" width="260" height="51"/>
@@ -48,7 +55,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gxg-L6-MjT">
                                         <rect key="frame" x="0.0" y="140" width="260" height="51"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                                        <color key="tintColor" red="0.98097866769999997" green="0.78220450880000003" blue="0.017933132130000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.98097866769999997" green="1" blue="0.017933132130000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Strongly Agree"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Neutral">
@@ -56,7 +63,7 @@
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAq-M0-WAY">
-                                        <rect key="frame" x="0.0" y="210" width="260" height="51"/>
+                                        <rect key="frame" x="0.0" y="210.00000000000006" width="260" height="51"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                         <color key="tintColor" systemColor="systemRedColor"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -66,7 +73,7 @@
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewv-JN-pu7">
-                                        <rect key="frame" x="0.0" y="280" width="260" height="51"/>
+                                        <rect key="frame" x="0.0" y="280.00000000000006" width="260" height="51"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                         <color key="tintColor" red="0.55686277149999996" green="0.1607843041" blue="0.14509806040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -78,49 +85,83 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QuestionTrait" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xA-uB-H2x">
-                                <rect key="frame" x="48" y="141" width="101" height="20.5"/>
+                                <rect key="frame" x="48" y="191.66666666666666" width="101" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Counter" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCU-ZD-3yB">
-                                <rect key="frame" x="48" y="90" width="184" height="26.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="blw-LY-oqh">
+                                <rect key="frame" x="294" y="90" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="NBI-td-hgg"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <imageReference key="image" image="questionmark.app.fill" catalog="system" symbolScale="large"/>
+                                    <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICO-yL-9ve">
+                                <rect key="frame" x="225" y="713" width="100" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="TMF-fn-4mg"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Next">
+                                    <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKC-H8-mbT">
+                                <rect key="frame" x="65" y="712" width="100" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Previous">
+                                    <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Yv-Lr-rz1"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
+                            <constraint firstItem="iKC-H8-mbT" firstAttribute="leading" secondItem="cc8-oB-ENN" secondAttribute="leading" id="4Q8-iY-RsQ"/>
+                            <constraint firstItem="iKC-H8-mbT" firstAttribute="top" secondItem="cc8-oB-ENN" secondAttribute="bottom" constant="38.666666666666742" id="4cT-bb-oMr"/>
                             <constraint firstItem="cc8-oB-ENN" firstAttribute="top" secondItem="NFP-tL-y6W" secondAttribute="bottom" constant="60" id="6IQ-4S-ga2"/>
                             <constraint firstItem="tCU-ZD-3yB" firstAttribute="leading" secondItem="NFP-tL-y6W" secondAttribute="leading" id="BUK-fW-Fnm"/>
                             <constraint firstItem="tCU-ZD-3yB" firstAttribute="leading" secondItem="0Yv-Lr-rz1" secondAttribute="leading" constant="48" id="ByB-pe-amg"/>
-                            <constraint firstItem="NFP-tL-y6W" firstAttribute="top" secondItem="0xA-uB-H2x" secondAttribute="bottom" constant="139" id="CVy-fI-mt7"/>
+                            <constraint firstItem="NFP-tL-y6W" firstAttribute="top" secondItem="0xA-uB-H2x" secondAttribute="bottom" constant="50" id="CVy-fI-mt7"/>
                             <constraint firstItem="tCU-ZD-3yB" firstAttribute="leading" secondItem="0xA-uB-H2x" secondAttribute="leading" id="Eyj-0H-qez"/>
-                            <constraint firstItem="0xA-uB-H2x" firstAttribute="top" secondItem="tCU-ZD-3yB" secondAttribute="bottom" constant="24.5" id="K2Z-te-DQd"/>
+                            <constraint firstItem="0xA-uB-H2x" firstAttribute="top" secondItem="tCU-ZD-3yB" secondAttribute="bottom" constant="25" id="K2Z-te-DQd"/>
+                            <constraint firstItem="blw-LY-oqh" firstAttribute="top" secondItem="0Yv-Lr-rz1" secondAttribute="top" constant="46" id="Mh9-US-OAQ"/>
+                            <constraint firstItem="ICO-yL-9ve" firstAttribute="top" secondItem="cc8-oB-ENN" secondAttribute="bottom" constant="39.666666666666742" id="Neq-gX-5eY"/>
                             <constraint firstItem="0Yv-Lr-rz1" firstAttribute="trailing" secondItem="NFP-tL-y6W" secondAttribute="trailing" constant="46" id="Q4C-FV-4Bw"/>
-                            <constraint firstItem="tCU-ZD-3yB" firstAttribute="top" secondItem="0Yv-Lr-rz1" secondAttribute="top" constant="46" id="Zmo-p0-1N3"/>
+                            <constraint firstItem="blw-LY-oqh" firstAttribute="leading" secondItem="tCU-ZD-3yB" secondAttribute="trailing" constant="86" id="XFH-LC-Zpj"/>
+                            <constraint firstItem="tCU-ZD-3yB" firstAttribute="top" secondItem="0Yv-Lr-rz1" secondAttribute="top" constant="70" id="Zmo-p0-1N3"/>
                             <constraint firstItem="cc8-oB-ENN" firstAttribute="centerX" secondItem="pql-zA-MO0" secondAttribute="centerX" id="gEw-nP-5Gk"/>
                             <constraint firstItem="0Yv-Lr-rz1" firstAttribute="trailing" secondItem="tCU-ZD-3yB" secondAttribute="trailing" constant="182" id="nli-Jd-bZc"/>
                             <constraint firstItem="0Yv-Lr-rz1" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0xA-uB-H2x" secondAttribute="trailing" symbolic="YES" id="p9A-hv-Jzg"/>
+                            <constraint firstItem="ICO-yL-9ve" firstAttribute="leading" secondItem="iKC-H8-mbT" secondAttribute="trailing" constant="60" id="tXn-QH-UX1"/>
+                            <constraint firstItem="ICO-yL-9ve" firstAttribute="trailing" secondItem="cc8-oB-ENN" secondAttribute="trailing" id="uQY-3a-2uL"/>
+                            <constraint firstItem="blw-LY-oqh" firstAttribute="trailing" secondItem="NFP-tL-y6W" secondAttribute="trailing" id="zgo-KY-Fmg"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faV-Pi-Nt3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="107" y="87"/>
+            <point key="canvasLocation" x="105.79710144927537" y="86.383928571428569"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="questionmark.app.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
