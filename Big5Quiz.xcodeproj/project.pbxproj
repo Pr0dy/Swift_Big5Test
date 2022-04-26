@@ -37,6 +37,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D2762CE32818567B00A247CE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D2762CE42818568400A247CE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D2F622B0281478560092D58C /* LaunchScreen.storyboard */,
+				D2F622AB281478550092D58C /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D2762CE52818569300A247CE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D2F622A9281478550092D58C /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		D2F62299281478550092D58C = {
 			isa = PBXGroup;
 			children = (
@@ -58,10 +82,10 @@
 			children = (
 				D2F622A5281478550092D58C /* AppDelegate.swift */,
 				D2F622A7281478550092D58C /* SceneDelegate.swift */,
-				D2F622A9281478550092D58C /* ViewController.swift */,
-				D2F622AB281478550092D58C /* Main.storyboard */,
+				D2762CE32818567B00A247CE /* Models */,
+				D2762CE42818568400A247CE /* Views */,
+				D2762CE52818569300A247CE /* Controllers */,
 				D2F622AE281478560092D58C /* Assets.xcassets */,
-				D2F622B0281478560092D58C /* LaunchScreen.storyboard */,
 				D2F622B3281478560092D58C /* Info.plist */,
 			);
 			path = Big5Quiz;
