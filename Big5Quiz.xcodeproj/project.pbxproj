@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D2F622A2281478550092D58C /* Big5Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Big5Quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2F622A2281478550092D58C /* Big5  Personality Traits Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Big5  Personality Traits Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F622A5281478550092D58C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2F622A7281478550092D58C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D2F622A9281478550092D58C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 		D2F622A3281478550092D58C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D2F622A2281478550092D58C /* Big5Quiz.app */,
+				D2F622A2281478550092D58C /* Big5  Personality Traits Quiz.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,7 +108,7 @@
 			);
 			name = Big5Quiz;
 			productName = Big5Quiz;
-			productReference = D2F622A2281478550092D58C /* Big5Quiz.app */;
+			productReference = D2F622A2281478550092D58C /* Big5  Personality Traits Quiz.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -327,7 +327,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leandro.banha.Big5Quiz;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Big5  Personality Traits Quiz";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -355,7 +355,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leandro.banha.Big5Quiz;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Big5  Personality Traits Quiz";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
