@@ -8,7 +8,7 @@ enum Trait{
     case Openess
 }
 
-enum Subtraits{
+enum Subtrait{
     //Extraversion Subtraits
     case Activity
     case Assertiveness

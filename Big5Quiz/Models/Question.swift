@@ -2,12 +2,12 @@ import Foundation
 
 class Question{
     let questionContent: String
-    let questionTrait: String
-    let questionSubTrait: String
+    let questionTrait: Trait
+    let questionSubTrait: Subtrait
     
-    init(content: String, trait: String, SubTrait: String){
+    init(content: String, trait: Trait, Subtrait: Subtrait){
         self.questionContent = content
         self.questionTrait = trait
-        self.questionSubTrait = SubTrait
+        self.questionSubTrait = Subtrait
     }
 }
