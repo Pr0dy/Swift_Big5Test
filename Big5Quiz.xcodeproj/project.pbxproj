@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D2D4C16A281956980098C257 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4C169281956980098C257 /* Question.swift */; };
 		D2F622A6281478550092D58C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F622A5281478550092D58C /* AppDelegate.swift */; };
 		D2F622A8281478550092D58C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F622A7281478550092D58C /* SceneDelegate.swift */; };
 		D2F622AA281478550092D58C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F622A9281478550092D58C /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D2D4C169281956980098C257 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		D2F622A2281478550092D58C /* Big5  Personality Traits Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Big5  Personality Traits Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F622A5281478550092D58C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2F622A7281478550092D58C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +42,7 @@
 		D2762CE32818567B00A247CE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D2D4C169281956980098C257 /* Question.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2F622AA281478550092D58C /* ViewController.swift in Sources */,
+				D2D4C16A281956980098C257 /* Question.swift in Sources */,
 				D2F622A6281478550092D58C /* AppDelegate.swift in Sources */,
 				D2F622A8281478550092D58C /* SceneDelegate.swift in Sources */,
 			);
