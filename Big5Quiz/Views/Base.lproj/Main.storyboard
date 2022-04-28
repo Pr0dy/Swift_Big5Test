@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Menu View Controller-->
         <scene sceneID="YA1-f7-U8R">
             <objects>
-                <viewController id="rZF-pG-YZZ" sceneMemberID="viewController">
+                <viewController id="rZF-pG-YZZ" customClass="MenuViewController" customModule="Big5__Personality_Traits_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Fg-1N-1B9">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,6 +33,9 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
                                             <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="pressedQuickTest:" destination="rZF-pG-YZZ" eventType="touchUpInside" id="tmb-wj-muO"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDr-BP-DSt">
                                         <rect key="frame" x="0.0" y="81.333333333333314" width="170" height="40.333333333333343"/>
