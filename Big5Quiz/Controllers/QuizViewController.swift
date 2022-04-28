@@ -1,17 +1,12 @@
-//
-//  ViewController.swift
-//  Big5Quiz
-//
-//  Created by leandro.banha on 23/04/2022.
-//
-
+import Foundation
 import UIKit
 
 class QuizViewController: UIViewController {
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
 

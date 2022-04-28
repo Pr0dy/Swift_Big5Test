@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D246279E281A9ADD00A3810E /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D246279D281A9ADD00A3810E /* AppConstants.swift */; };
 		D2D4C16A281956980098C257 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4C169281956980098C257 /* Question.swift */; };
 		D2D4C16C281958060098C257 /* QuestionDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4C16B281958060098C257 /* QuestionDatabase.swift */; };
 		D2D4C16E28195DC50098C257 /* QuestionEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4C16D28195DC50098C257 /* QuestionEnums.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D246279D281A9ADD00A3810E /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		D2D4C169281956980098C257 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		D2D4C16B281958060098C257 /* QuestionDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDatabase.swift; sourceTree = "<group>"; };
 		D2D4C16D28195DC50098C257 /* QuestionEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionEnums.swift; sourceTree = "<group>"; };
@@ -45,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D246279C281A9AC000A3810E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D2F622AE281478560092D58C /* Assets.xcassets */,
+				D246279D281A9ADD00A3810E /* AppConstants.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		D2762CE32818567B00A247CE /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,7 +108,7 @@
 				D2762CE32818567B00A247CE /* Models */,
 				D2762CE42818568400A247CE /* Views */,
 				D2762CE52818569300A247CE /* Controllers */,
-				D2F622AE281478560092D58C /* Assets.xcassets */,
+				D246279C281A9AC000A3810E /* Supporting Files */,
 				D2F622B3281478560092D58C /* Info.plist */,
 			);
 			path = Big5Quiz;
@@ -177,6 +188,7 @@
 				D2F622AA281478550092D58C /* QuizViewController.swift in Sources */,
 				D2D4C16A281956980098C257 /* Question.swift in Sources */,
 				D2D4C16E28195DC50098C257 /* QuestionEnums.swift in Sources */,
+				D246279E281A9ADD00A3810E /* AppConstants.swift in Sources */,
 				D2D4C170281A97B60098C257 /* MenuViewController.swift in Sources */,
 				D2F622A6281478550092D58C /* AppDelegate.swift in Sources */,
 				D2F622A8281478550092D58C /* SceneDelegate.swift in Sources */,
