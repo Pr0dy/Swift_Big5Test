@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rZF-pG-YZZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZiV-CX-tHD">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -18,15 +18,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brainIcon" translatesAutoresizingMaskIntoConstraints="NO" id="f8f-JZ-i8d">
-                                <rect key="frame" x="64" y="144" width="274" height="190"/>
+                                <rect key="frame" x="64" y="148" width="274" height="190"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="190" id="azX-8Z-EBd"/>
                                 </constraints>
                             </imageView>
                             <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="cQz-78-vWT">
-                                <rect key="frame" x="110" y="406" width="170" height="284.33333333333326"/>
+                                <rect key="frame" x="110" y="410" width="170" height="280.33333333333326"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxQ-xE-VXy">
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxQ-xE-VXy">
                                         <rect key="frame" x="0.0" y="0.0" width="170" height="40.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Quick Test!">
@@ -34,7 +34,7 @@
                                             <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                         </buttonConfiguration>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDr-BP-DSt">
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDr-BP-DSt">
                                         <rect key="frame" x="0.0" y="81.333333333333314" width="170" height="40.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Custom Test">
@@ -42,18 +42,18 @@
                                             <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                         </buttonConfiguration>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUI-r7-PZO">
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQt-gD-cHR">
                                         <rect key="frame" x="0.0" y="162.66666666666663" width="170" height="40.333333333333343"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="The BIG5 Traits">
+                                        <buttonConfiguration key="configuration" style="filled" title="My Tests">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
                                             <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                         </buttonConfiguration>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQt-gD-cHR">
-                                        <rect key="frame" x="0.0" y="244.00000000000003" width="170" height="40.333333333333343"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUI-r7-PZO">
+                                        <rect key="frame" x="0.0" y="244.00000000000003" width="170" height="36.333333333333343"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="My Tests">
+                                        <buttonConfiguration key="configuration" style="filled" title="The BIG5 Traits">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
                                             <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                         </buttonConfiguration>
@@ -74,18 +74,19 @@
                             <constraint firstItem="f8f-JZ-i8d" firstAttribute="leading" secondItem="Bs0-98-HgA" secondAttribute="leading" constant="64" id="nT0-ky-uzw"/>
                             <constraint firstItem="Bs0-98-HgA" firstAttribute="bottom" secondItem="cQz-78-vWT" secondAttribute="bottom" constant="119.67" id="t16-pi-U2Y"/>
                             <constraint firstItem="Bs0-98-HgA" firstAttribute="trailing" secondItem="cQz-78-vWT" secondAttribute="trailing" constant="110" id="wAh-dE-p0L"/>
-                            <constraint firstItem="f8f-JZ-i8d" firstAttribute="top" secondItem="Bs0-98-HgA" secondAttribute="top" constant="100" id="wYp-gU-Sr0"/>
+                            <constraint firstItem="f8f-JZ-i8d" firstAttribute="top" secondItem="Bs0-98-HgA" secondAttribute="top" constant="60" id="wYp-gU-Sr0"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="cxB-14-CQg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LDi-6r-DM2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-818.46153846153845" y="85.308056872037909"/>
+            <point key="canvasLocation" x="100" y="84.597156398104261"/>
         </scene>
-        <!--View Controller-->
+        <!--Quiz View Controller-->
         <scene sceneID="5HC-Dw-cOc">
             <objects>
-                <viewController id="g4V-ac-QB7" sceneMemberID="viewController">
+                <viewController id="g4V-ac-QB7" customClass="QuizViewController" customModule="Big5__Personality_Traits_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pql-zA-MO0">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -222,7 +223,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faV-Pi-Nt3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="105.79710144927537" y="86.383928571428569"/>
+            <point key="canvasLocation" x="1033.8461538461538" y="86.018957345971558"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3NT-56-PLq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZiV-CX-tHD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rlx-ua-BKI">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rZF-pG-YZZ" kind="relationship" relationship="rootViewController" id="3xk-yE-DH9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ET-LH-Syd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-829.23076923076917" y="84.597156398104261"/>
         </scene>
     </scenes>
     <resources>
