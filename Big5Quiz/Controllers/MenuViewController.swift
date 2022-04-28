@@ -3,7 +3,8 @@ import UIKit
 
 class MenuViewController: UIViewController{
     
-    var constants = AppConstants()
+    let constants = AppConstants()
+    //var questions = QuestionDatabase()
     var testType: String?
     
     override func viewDidLoad() {

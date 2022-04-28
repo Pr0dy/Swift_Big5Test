@@ -235,6 +235,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="questionCounterLabel" destination="tCU-ZD-3yB" id="D64-Cg-Rlf"/>
+                        <outlet property="questionSubtraitLabel" destination="0xA-uB-H2x" id="6QZ-oW-3Jm"/>
+                        <outlet property="questionTextLabel" destination="NFP-tL-y6W" id="iSV-ie-qxE"/>
                         <outlet property="quizTypeLabel" destination="eGM-cA-K56" id="5KH-L5-zUr"/>
                     </connections>
                 </viewController>
