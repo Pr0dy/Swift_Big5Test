@@ -234,6 +234,13 @@
                             <constraint firstItem="blw-LY-oqh" firstAttribute="trailing" secondItem="NFP-tL-y6W" secondAttribute="trailing" id="zgo-KY-Fmg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="questionCounterLabel" destination="tCU-ZD-3yB" id="Kui-ib-kYP"/>
+                        <outlet property="questionSubtraitLabel" destination="0xA-uB-H2x" id="kxB-7l-IZW"/>
+                        <outlet property="questionTextLabel" destination="NFP-tL-y6W" id="0Qy-hD-qes"/>
+                        <outlet property="testTypeLabel" destination="tCU-ZD-3yB" id="KwY-da-W3U"/>
+                        <outlet property="typeTestLabel" destination="eGM-cA-K56" id="qas-ZP-IKv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faV-Pi-Nt3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
