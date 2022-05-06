@@ -6,12 +6,13 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var quizTypeLabel: UILabel!
     @IBOutlet weak var questionCounterLabel: UILabel!
     @IBOutlet weak var questionSubtraitLabel: UILabel!
+    @IBOutlet weak var questionTrait: UILabel!
     @IBOutlet weak var questionTextLabel: UILabel!
     
     var questions = QuestionDatabase()
     var sortedQuestions = [Question]()
     var testType: String?
-    var currentQuestion = 0
+    var currentQuestion = 1
     
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -29,17 +30,23 @@ class QuizViewController: UIViewController {
             }
         }
         
-        DispatchQueue.main.async {
-            self.questionCounterLabel.text = "Question \(self.currentQuestion+1) out of \(self.sortedQuestions.count)."
-        }
-        
         displayQuestion(questionIndex: currentQuestion)
     }
     
+    @IBAction func optionPressed(_ sender: UIButton) {
+        currentQuestion+=1
+        displayQuestion(questionIndex: currentQuestion)
+    }
+
+    
     func displayQuestion(questionIndex: Int){
+        if questionIndex <= sortedQuestions.count{
         DispatchQueue.main.async {
+            self.questionCounterLabel.text = "Question \(self.currentQuestion) out of \(self.sortedQuestions.count-1)."
             self.questionTextLabel.text = self.sortedQuestions[questionIndex].questionContent
+            self.questionTrait.text = String(describing: self.sortedQuestions[questionIndex].questionTrait)
             self.questionSubtraitLabel.text = String(describing: self.sortedQuestions[questionIndex].questionSubTrait)
+        }
         }
     }
 }

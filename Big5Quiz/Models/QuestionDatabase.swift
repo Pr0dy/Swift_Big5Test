@@ -6,6 +6,7 @@ struct QuestionDatabase{
     //Activity
         Question(content: "I react quickly", trait: Trait.Extraversion, Subtrait: Subtrait.Activity),
         Question(content: "I love action", trait: Trait.Extraversion, Subtrait: Subtrait.Activity),
+        Question(content: "I like a leisurely lifestyle", trait: Trait.Extraversion, Subtrait: Subtrait.Activity),
     //Cheerfulness
         Question(content: "I laugh my way through life", trait: Trait.Extraversion, Subtrait: Subtrait.Cheerfulness),
         Question(content: "I look at the bright side of life", trait: Trait.Extraversion, Subtrait: Subtrait.Cheerfulness),
@@ -19,6 +20,7 @@ struct QuestionDatabase{
         
     //Friendliness
         Question(content: "I prefer to be alone", trait: Trait.Extraversion, Subtrait: Subtrait.Friendliness),
+        Question(content: "I seek quiet", trait: Trait.Extraversion, Subtrait: Subtrait.Friendliness)
     ]
     
     let agreeablenessQuestions = [
@@ -27,6 +29,8 @@ struct QuestionDatabase{
         Question(content: "I value cooperation to competition", trait: Trait.Agreeableness, Subtrait: Subtrait.Cooperation),
     //Morality
         Question(content: "I take revenge on others", trait: Trait.Agreeableness, Subtrait: Subtrait.Morality),
+        Question(content: "I use flattery to get ahead", trait: Trait.Agreeableness, Subtrait: Subtrait.Morality),
+        
     //Sympathy
         Question(content: "I feel sympathy for those who are worse off than myself", trait: Trait.Agreeableness, Subtrait: Subtrait.Sympathy),
     //Altruism
@@ -51,12 +55,15 @@ struct QuestionDatabase{
         Question(content: "I leave a mess in my room", trait: Trait.Conscientiousness, Subtrait: Subtrait.Orderliness),
         Question(content: "I like to tidy up", trait: Trait.Conscientiousness, Subtrait: Subtrait.Orderliness),
         Question(content: "I love order and regularity", trait: Trait.Conscientiousness, Subtrait: Subtrait.Orderliness),
+    //Dutifulness
+        Question(content: "I break rules", trait: Trait.Conscientiousness, Subtrait: Subtrait.Dutifulness),
     //Cautiouness
         Question(content: "I postpone decisions", trait: Trait.Conscientiousness, Subtrait: Subtrait.Cautiousness),
         Question(content: "I rush into things", trait: Trait.Conscientiousness, Subtrait: Subtrait.Cautiousness),
         Question(content: "I avoid mistakes", trait: Trait.Conscientiousness, Subtrait: Subtrait.Cautiousness),
     //Self-Discipline
         Question(content: "I get to work at once", trait: Trait.Conscientiousness, Subtrait: Subtrait.Self_Discipline),
+        Question(content: "I start tasks right away", trait: Trait.Conscientiousness, Subtrait: Subtrait.Self_Discipline),
     //Achievement Striving
         Question(content: "I am highly motivated to succeed", trait: Trait.Conscientiousness, Subtrait: Subtrait.Achievement_Striving),
         Question(content: "I do more than what's expected of me", trait: Trait.Conscientiousness, Subtrait: Subtrait.Achievement_Striving),
@@ -73,6 +80,7 @@ struct QuestionDatabase{
         Question(content: "I have frequent mood swings", trait: Trait.Neuroticism, Subtrait: Subtrait.Depression), //? right trait and subtrait?
         Question(content: "Im often in a bad mood", trait: Trait.Neuroticism, Subtrait: Subtrait.Depression),
         Question(content: "I dislike myself", trait: Trait.Neuroticism, Subtrait: Subtrait.Depression),
+        Question(content: "I am very pleased with myself", trait: Trait.Neuroticism, Subtrait: Subtrait.Depression),
     //Vulnerability
         Question(content: "I feel relaxed most of the time", trait: Trait.Neuroticism, Subtrait: Subtrait.Vulnerability), //? right trait and subtrait? Anger?
         Question(content: "I get overwhelmed by emotions", trait: Trait.Neuroticism, Subtrait: Subtrait.Vulnerability), //? right trait and subtrait?
@@ -90,6 +98,9 @@ struct QuestionDatabase{
     ]
     
     let openessQuestions = [
+    //Artistic Interests
+        Question(content: "I do not like art", trait: Trait.Openess, Subtrait: Subtrait.Artistic_Interests),
+        Question(content: "I believe in the importance of art", trait: Trait.Openess, Subtrait: Subtrait.Artistic_Interests),
     //Adventurousness
         Question(content: "I am a creature of habit", trait: Trait.Openess, Subtrait: Subtrait.Adventurousness),
         Question(content: "I dislike changes", trait: Trait.Openess, Subtrait: Subtrait.Adventurousness),
@@ -98,6 +109,7 @@ struct QuestionDatabase{
     //Imagination
         Question(content: "I very rarely get lost on my thoughts", trait: Trait.Openess, Subtrait: Subtrait.Imagination),
         Question(content: "I have a very good imagination", trait: Trait.Openess, Subtrait: Subtrait.Imagination),
+        Question(content: "I have dificulty imagining things", trait: Trait.Openess, Subtrait: Subtrait.Imagination),
     //Intelect
         Question(content: "I believe there is no absolute right or wrong", trait: Trait.Openess, Subtrait: Subtrait.Intellect),
         Question(content: "I dont have interest in abstract ideas", trait: Trait.Openess, Subtrait: Subtrait.Intellect),
@@ -105,6 +117,7 @@ struct QuestionDatabase{
         Question(content: "I love reading challenging material", trait: Trait.Openess, Subtrait: Subtrait.Intellect),
     //Emotionality
         Question(content: "I am passionate about causes", trait: Trait.Openess, Subtrait: Subtrait.Emotionality),
+        Question(content: "I don't understand people who get emotional", trait: Trait.Openess, Subtrait: Subtrait.Emotionality),
     //Liberalism
         Question(content: "I would consider voting for conservative party", trait: Trait.Openess, Subtrait: Subtrait.Emotionality),
         Question(content: "I believe its just to apply equal punishment to the kind of offense that was made", trait: Trait.Openess, Subtrait: Subtrait.Liberalism), //right trait?

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZiV-CX-tHD">
-    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="rZF-pG-YZZ" customClass="MenuViewController" customModule="Big5__Personality_Traits_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Fg-1N-1B9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brainIcon" translatesAutoresizingMaskIntoConstraints="NO" id="f8f-JZ-i8d">
@@ -25,10 +25,10 @@
                                 </constraints>
                             </imageView>
                             <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cQz-78-vWT">
-                                <rect key="frame" x="75" y="224" width="170" height="196"/>
+                                <rect key="frame" x="90" y="224" width="140" height="284"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxQ-xE-VXy">
-                                        <rect key="frame" x="0.0" y="0.0" width="170" height="43"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="65"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Quick Test!">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
@@ -39,7 +39,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDr-BP-DSt">
-                                        <rect key="frame" x="0.0" y="51" width="170" height="43"/>
+                                        <rect key="frame" x="0.0" y="73" width="140" height="65"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Custom Test">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
@@ -47,7 +47,7 @@
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQt-gD-cHR">
-                                        <rect key="frame" x="0.0" y="102" width="170" height="43"/>
+                                        <rect key="frame" x="0.0" y="146" width="140" height="65"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="My Tests">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
@@ -55,7 +55,7 @@
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUI-r7-PZO">
-                                        <rect key="frame" x="0.0" y="153" width="170" height="43"/>
+                                        <rect key="frame" x="0.0" y="219" width="140" height="65"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="The BIG5 Traits">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
@@ -87,12 +87,12 @@
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
                             <constraint firstItem="VvF-R0-jQK" firstAttribute="top" secondItem="Bs0-98-HgA" secondAttribute="top" constant="20" id="DX9-os-d0B"/>
-                            <constraint firstItem="Bs0-98-HgA" firstAttribute="trailing" secondItem="cQz-78-vWT" secondAttribute="trailing" constant="75" id="JuZ-Ns-pG9"/>
+                            <constraint firstItem="Bs0-98-HgA" firstAttribute="trailing" secondItem="cQz-78-vWT" secondAttribute="trailing" constant="90" id="JuZ-Ns-pG9"/>
                             <constraint firstItem="f8f-JZ-i8d" firstAttribute="top" secondItem="Bs0-98-HgA" secondAttribute="top" id="UDY-mF-RJ2"/>
                             <constraint firstItem="f8f-JZ-i8d" firstAttribute="leading" secondItem="Bs0-98-HgA" secondAttribute="leading" constant="58" id="UWW-k6-fdh"/>
                             <constraint firstItem="cQz-78-vWT" firstAttribute="top" secondItem="VvF-R0-jQK" secondAttribute="bottom" constant="60" id="Y7l-Xy-aeX"/>
                             <constraint firstItem="Bs0-98-HgA" firstAttribute="trailing" secondItem="f8f-JZ-i8d" secondAttribute="trailing" constant="58" id="eci-fw-Bvq"/>
-                            <constraint firstItem="cQz-78-vWT" firstAttribute="leading" secondItem="Bs0-98-HgA" secondAttribute="leading" constant="75" id="eeq-4R-UWw"/>
+                            <constraint firstItem="cQz-78-vWT" firstAttribute="leading" secondItem="Bs0-98-HgA" secondAttribute="leading" constant="90" id="eeq-4R-UWw"/>
                             <constraint firstItem="Bs0-98-HgA" firstAttribute="bottom" secondItem="cQz-78-vWT" secondAttribute="bottom" constant="60" id="iG7-UU-mDv"/>
                             <constraint firstItem="Bs0-98-HgA" firstAttribute="trailing" secondItem="VvF-R0-jQK" secondAttribute="trailing" constant="40" id="ilY-nW-3nL"/>
                             <constraint firstItem="VvF-R0-jQK" firstAttribute="leading" secondItem="Bs0-98-HgA" secondAttribute="leading" constant="40" id="k2i-t3-zGX"/>
@@ -112,11 +112,11 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="g4V-ac-QB7" customClass="QuizViewController" customModule="Big5__Personality_Traits_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pql-zA-MO0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="81" translatesAutoresizingMaskIntoConstraints="NO" id="uoK-R5-Hlo">
-                                <rect key="frame" x="16" y="10" width="288" height="50"/>
+                                <rect key="frame" x="16" y="20" width="288" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGM-cA-K56">
                                         <rect key="frame" x="0.0" y="0.0" width="78" height="50"/>
@@ -152,19 +152,19 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFP-tL-y6W">
-                                <rect key="frame" x="16" y="104" width="288" height="20.5"/>
+                                <rect key="frame" x="16" y="124" width="288" height="43"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="20.5" id="iZe-o4-dqS"/>
+                                    <constraint firstAttribute="height" constant="43" id="iZe-o4-dqS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FH9-tz-61K">
-                                <rect key="frame" x="60" y="134.5" width="200" height="285.5"/>
+                                <rect key="frame" x="60" y="197" width="200" height="311"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gxg-L6-MjT">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="49"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="54"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -172,9 +172,12 @@
                                         <buttonConfiguration key="configuration" style="gray" title="Strongly Agree">
                                             <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="optionPressed:" destination="g4V-ac-QB7" eventType="touchUpInside" id="owN-f6-SIf"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYp-gy-NV6">
-                                        <rect key="frame" x="0.0" y="59" width="200" height="49"/>
+                                        <rect key="frame" x="0.0" y="64" width="200" height="54.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                         <color key="tintColor" red="0.44903471109999998" green="0.76942896839999997" blue="0.46722890049999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -182,9 +185,12 @@
                                         <buttonConfiguration key="configuration" style="gray" title="Agree">
                                             <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="optionPressed:" destination="g4V-ac-QB7" eventType="touchUpInside" id="clJ-fM-XDV"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3H4-xI-xnK">
-                                        <rect key="frame" x="0.0" y="118" width="200" height="49.5"/>
+                                        <rect key="frame" x="0.0" y="128.5" width="200" height="54"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                         <color key="tintColor" red="0.98097866769999997" green="1" blue="0.017933132130000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -192,9 +198,12 @@
                                         <buttonConfiguration key="configuration" style="gray" title="Neutral">
                                             <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="optionPressed:" destination="g4V-ac-QB7" eventType="touchUpInside" id="Kuz-Z3-FAX"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qV9-t8-72q">
-                                        <rect key="frame" x="0.0" y="177.5" width="200" height="49"/>
+                                        <rect key="frame" x="0.0" y="192.5" width="200" height="54.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                         <color key="tintColor" systemColor="systemRedColor"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -202,9 +211,12 @@
                                         <buttonConfiguration key="configuration" style="gray" title="Disagree">
                                             <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="optionPressed:" destination="g4V-ac-QB7" eventType="touchUpInside" id="ZjO-uA-LDT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crq-g9-xUL">
-                                        <rect key="frame" x="0.0" y="236.5" width="200" height="49"/>
+                                        <rect key="frame" x="0.0" y="257" width="200" height="54"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                         <color key="tintColor" red="0.55686277149999996" green="0.1607843041" blue="0.14509806040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -212,11 +224,14 @@
                                         <buttonConfiguration key="configuration" style="gray" title="Strongly Disagree">
                                             <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="optionPressed:" destination="g4V-ac-QB7" eventType="touchUpInside" id="MF0-Zd-WSm"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Counter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCU-ZD-3yB">
-                                <rect key="frame" x="3" y="70" width="314" height="24"/>
+                                <rect key="frame" x="3" y="90" width="314" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="Kgn-X5-j8S"/>
                                 </constraints>
@@ -225,7 +240,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kul-83-6I7">
-                                <rect key="frame" x="259" y="429" width="45" height="31"/>
+                                <rect key="frame" x="259" y="517" width="45" height="31"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled">
@@ -239,13 +254,13 @@
                         <constraints>
                             <constraint firstItem="NFP-tL-y6W" firstAttribute="top" secondItem="tCU-ZD-3yB" secondAttribute="bottom" constant="10" id="6kk-0U-ERr"/>
                             <constraint firstItem="0Yv-Lr-rz1" firstAttribute="bottom" secondItem="FH9-tz-61K" secondAttribute="bottom" constant="60" id="8Rf-Y2-vc8"/>
-                            <constraint firstItem="uoK-R5-Hlo" firstAttribute="top" secondItem="0Yv-Lr-rz1" secondAttribute="top" constant="10" id="8gS-iX-72X"/>
-                            <constraint firstItem="tCU-ZD-3yB" firstAttribute="top" secondItem="uoK-R5-Hlo" secondAttribute="bottom" constant="10" id="Bh7-Ig-uxM"/>
+                            <constraint firstItem="uoK-R5-Hlo" firstAttribute="top" secondItem="0Yv-Lr-rz1" secondAttribute="top" constant="20" id="8gS-iX-72X"/>
+                            <constraint firstItem="tCU-ZD-3yB" firstAttribute="top" secondItem="uoK-R5-Hlo" secondAttribute="bottom" constant="20" id="Bh7-Ig-uxM"/>
                             <constraint firstItem="NFP-tL-y6W" firstAttribute="trailing" secondItem="Kul-83-6I7" secondAttribute="trailing" id="CyW-Gb-7Uo"/>
                             <constraint firstItem="Kul-83-6I7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0Yv-Lr-rz1" secondAttribute="leading" symbolic="YES" id="D2g-IH-fXr"/>
                             <constraint firstItem="0Yv-Lr-rz1" firstAttribute="trailing" secondItem="tCU-ZD-3yB" secondAttribute="trailing" constant="3" id="Hkk-6P-E3C"/>
                             <constraint firstItem="0Yv-Lr-rz1" firstAttribute="bottom" secondItem="Kul-83-6I7" secondAttribute="bottom" constant="20" id="IW4-eW-kVe"/>
-                            <constraint firstItem="FH9-tz-61K" firstAttribute="top" secondItem="NFP-tL-y6W" secondAttribute="bottom" constant="10" id="JXq-Eq-u6t"/>
+                            <constraint firstItem="FH9-tz-61K" firstAttribute="top" secondItem="NFP-tL-y6W" secondAttribute="bottom" constant="30" id="JXq-Eq-u6t"/>
                             <constraint firstItem="0Yv-Lr-rz1" firstAttribute="trailing" secondItem="NFP-tL-y6W" secondAttribute="trailing" constant="16" id="N97-R2-QW1"/>
                             <constraint firstItem="uoK-R5-Hlo" firstAttribute="leading" secondItem="0Yv-Lr-rz1" secondAttribute="leading" constant="16" id="PhK-71-PQW"/>
                             <constraint firstItem="NFP-tL-y6W" firstAttribute="leading" secondItem="0Yv-Lr-rz1" secondAttribute="leading" constant="16" id="RCk-iU-6pX"/>
@@ -260,12 +275,13 @@
                         <outlet property="questionCounterLabel" destination="tCU-ZD-3yB" id="D64-Cg-Rlf"/>
                         <outlet property="questionSubtraitLabel" destination="0xA-uB-H2x" id="6QZ-oW-3Jm"/>
                         <outlet property="questionTextLabel" destination="NFP-tL-y6W" id="iSV-ie-qxE"/>
+                        <outlet property="questionTrait" destination="pZk-Nt-Pn2" id="6xv-yU-JiO"/>
                         <outlet property="quizTypeLabel" destination="eGM-cA-K56" id="5KH-L5-zUr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faV-Pi-Nt3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1033.125" y="85"/>
+            <point key="canvasLocation" x="1031.8840579710145" y="84.782608695652186"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3NT-56-PLq">
