@@ -45,7 +45,6 @@ class QuizViewController: UIViewController {
         case "Strongly Disagree": break
         default: break
         }
-        
     }
 
     

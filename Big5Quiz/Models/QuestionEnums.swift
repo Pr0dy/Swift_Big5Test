@@ -11,7 +11,7 @@ enum Trait{
 enum Subtrait{
     //Extraversion Subtraits
     case Activity
-    case Assertiveness
+    case Sympathy
     case Cheerfulness
     case Excitement_Seeking
     case Friendliness
@@ -21,7 +21,7 @@ enum Subtrait{
     case Cooperation
     case Modesty
     case Morality
-    case Sympathy
+    case Assertiveness
     case Trust
     //Conscientiousness Subtraits
     case Achievement_Striving
