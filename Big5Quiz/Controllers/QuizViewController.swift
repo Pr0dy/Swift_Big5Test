@@ -36,6 +36,16 @@ class QuizViewController: UIViewController {
     @IBAction func optionPressed(_ sender: UIButton) {
         currentQuestion+=1
         displayQuestion(questionIndex: currentQuestion)
+        
+        switch sender.currentAttributedTitle?.string{
+        case "Strongly Agree": break
+        case "Agree": break
+        case "Neutral": break
+        case "Disagree": break
+        case "Strongly Disagree": break
+        default: break
+        }
+        
     }
 
     

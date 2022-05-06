@@ -25,10 +25,10 @@
                                 </constraints>
                             </imageView>
                             <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cQz-78-vWT">
-                                <rect key="frame" x="90" y="224" width="140" height="284"/>
+                                <rect key="frame" x="70" y="224" width="180" height="284"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxQ-xE-VXy">
-                                        <rect key="frame" x="0.0" y="0.0" width="140" height="65"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="65"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Quick Test!">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
@@ -39,7 +39,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDr-BP-DSt">
-                                        <rect key="frame" x="0.0" y="73" width="140" height="65"/>
+                                        <rect key="frame" x="0.0" y="73" width="180" height="65"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Custom Test">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
@@ -47,7 +47,7 @@
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQt-gD-cHR">
-                                        <rect key="frame" x="0.0" y="146" width="140" height="65"/>
+                                        <rect key="frame" x="0.0" y="146" width="180" height="65"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="My Tests">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
@@ -55,7 +55,7 @@
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUI-r7-PZO">
-                                        <rect key="frame" x="0.0" y="219" width="140" height="65"/>
+                                        <rect key="frame" x="0.0" y="219" width="180" height="65"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="The BIG5 Traits">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
@@ -87,12 +87,12 @@
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
                             <constraint firstItem="VvF-R0-jQK" firstAttribute="top" secondItem="Bs0-98-HgA" secondAttribute="top" constant="20" id="DX9-os-d0B"/>
-                            <constraint firstItem="Bs0-98-HgA" firstAttribute="trailing" secondItem="cQz-78-vWT" secondAttribute="trailing" constant="90" id="JuZ-Ns-pG9"/>
+                            <constraint firstItem="Bs0-98-HgA" firstAttribute="trailing" secondItem="cQz-78-vWT" secondAttribute="trailing" constant="70" id="JuZ-Ns-pG9"/>
                             <constraint firstItem="f8f-JZ-i8d" firstAttribute="top" secondItem="Bs0-98-HgA" secondAttribute="top" id="UDY-mF-RJ2"/>
                             <constraint firstItem="f8f-JZ-i8d" firstAttribute="leading" secondItem="Bs0-98-HgA" secondAttribute="leading" constant="58" id="UWW-k6-fdh"/>
                             <constraint firstItem="cQz-78-vWT" firstAttribute="top" secondItem="VvF-R0-jQK" secondAttribute="bottom" constant="60" id="Y7l-Xy-aeX"/>
                             <constraint firstItem="Bs0-98-HgA" firstAttribute="trailing" secondItem="f8f-JZ-i8d" secondAttribute="trailing" constant="58" id="eci-fw-Bvq"/>
-                            <constraint firstItem="cQz-78-vWT" firstAttribute="leading" secondItem="Bs0-98-HgA" secondAttribute="leading" constant="90" id="eeq-4R-UWw"/>
+                            <constraint firstItem="cQz-78-vWT" firstAttribute="leading" secondItem="Bs0-98-HgA" secondAttribute="leading" constant="70" id="eeq-4R-UWw"/>
                             <constraint firstItem="Bs0-98-HgA" firstAttribute="bottom" secondItem="cQz-78-vWT" secondAttribute="bottom" constant="60" id="iG7-UU-mDv"/>
                             <constraint firstItem="Bs0-98-HgA" firstAttribute="trailing" secondItem="VvF-R0-jQK" secondAttribute="trailing" constant="40" id="ilY-nW-3nL"/>
                             <constraint firstItem="VvF-R0-jQK" firstAttribute="leading" secondItem="Bs0-98-HgA" secondAttribute="leading" constant="40" id="k2i-t3-zGX"/>
