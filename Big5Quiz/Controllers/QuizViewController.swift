@@ -11,6 +11,7 @@ class QuizViewController: UIViewController {
     
     var questions = QuestionDatabase()
     var sortedQuestions = [Question]()
+    var testScores = QuizTestScores()
     var testType: String?
     var currentQuestion = 1
     
@@ -38,7 +39,9 @@ class QuizViewController: UIViewController {
         displayQuestion(questionIndex: currentQuestion)
         
         switch sender.currentAttributedTitle?.string{
-        case "Strongly Agree": break
+        case "Strongly Agree":
+            sortedQuestions[currentQuestion].questionTrait
+            break
         case "Agree": break
         case "Neutral": break
         case "Disagree": break
