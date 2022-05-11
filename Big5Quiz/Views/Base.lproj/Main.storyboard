@@ -277,11 +277,27 @@
                         <outlet property="questionTextLabel" destination="NFP-tL-y6W" id="iSV-ie-qxE"/>
                         <outlet property="questionTrait" destination="pZk-Nt-Pn2" id="6xv-yU-JiO"/>
                         <outlet property="quizTypeLabel" destination="eGM-cA-K56" id="5KH-L5-zUr"/>
+                        <segue destination="rux-JE-LLB" kind="presentation" id="ENG-X5-FxX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faV-Pi-Nt3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1031.8840579710145" y="84.782608695652186"/>
+            <point key="canvasLocation" x="983" y="82"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nJp-kN-1rf">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="rux-JE-LLB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Fg-2g-9JZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ZLR-UI-syK"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zCA-DD-pPK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1884" y="81"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3NT-56-PLq">
@@ -302,6 +318,7 @@
             <point key="canvasLocation" x="-829.23076923076917" y="84.597156398104261"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="brainIcon" width="190" height="134"/>
         <image name="mainScreen Title" width="130" height="27"/>

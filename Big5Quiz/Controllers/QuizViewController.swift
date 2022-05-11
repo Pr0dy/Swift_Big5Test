@@ -33,10 +33,8 @@ class QuizViewController: UIViewController {
     }
     
     @IBAction func optionPressed(_ sender: UIButton) {
-        currentQuestion+=1
-        displayQuestion(questionIndex: currentQuestion)
                 
-        switch sender.currentAttributedTitle?.string{
+        switch sender.titleLabel?.text{
         case "Strongly Agree":
             traitSelect(currentQuestion: sortedQuestions[currentQuestion], firstScore: 100, lastScore: 0)
             break
@@ -54,6 +52,10 @@ class QuizViewController: UIViewController {
             break
         default: break
         }
+        
+        currentQuestion+=1
+        displayQuestion(questionIndex: currentQuestion)
+        
     }
 
     

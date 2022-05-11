@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  Big5Quiz
-//
-//  Created by leandro.banha on 23/04/2022.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
