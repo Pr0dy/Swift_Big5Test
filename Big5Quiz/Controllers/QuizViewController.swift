@@ -22,7 +22,6 @@ class QuizViewController: UIViewController {
     }
     
     func prepareQuiz(){
-        
         let quizQuestions = [questions.extraversionQuestions,questions.agreeablenessQuestions,questions.conscientiounessQuestions,questions.neuroticismQuestions,questions.openessQuestions]
         
         for questionArr in quizQuestions{
@@ -30,22 +29,29 @@ class QuizViewController: UIViewController {
                 sortedQuestions.append(question)
             }
         }
-        
         displayQuestion(questionIndex: currentQuestion)
     }
     
     @IBAction func optionPressed(_ sender: UIButton) {
         currentQuestion+=1
         displayQuestion(questionIndex: currentQuestion)
-        
+                
         switch sender.currentAttributedTitle?.string{
         case "Strongly Agree":
-            sortedQuestions[currentQuestion].questionTrait
+            traitSelect(currentQuestion: sortedQuestions[currentQuestion], firstScore: 100, lastScore: 0)
             break
-        case "Agree": break
-        case "Neutral": break
-        case "Disagree": break
-        case "Strongly Disagree": break
+        case "Agree":
+            traitSelect(currentQuestion: sortedQuestions[currentQuestion], firstScore: 75, lastScore: 25)
+            break
+        case "Neutral":
+            traitSelect(currentQuestion: sortedQuestions[currentQuestion], firstScore: 50, lastScore: 50)
+            break
+        case "Disagree":
+            traitSelect(currentQuestion: sortedQuestions[currentQuestion], firstScore: 25, lastScore: 75)
+            break
+        case "Strongly Disagree":
+            traitSelect(currentQuestion: sortedQuestions[currentQuestion], firstScore: 0, lastScore: 100)
+            break
         default: break
         }
     }
@@ -58,7 +64,30 @@ class QuizViewController: UIViewController {
             self.questionTextLabel.text = self.sortedQuestions[questionIndex].questionContent
             self.questionTrait.text = String(describing: self.sortedQuestions[questionIndex].questionTrait)
             self.questionSubtraitLabel.text = String(describing: self.sortedQuestions[questionIndex].questionSubTrait)
+            }
         }
+    }
+    
+    func traitSelect(currentQuestion: Question, firstScore: Int, lastScore: Int){
+        var score: Int
+        
+        if currentQuestion.isPositive{
+            score = firstScore
+        } else {
+            score = lastScore
+        }
+        
+        switch currentQuestion.questionTrait{
+        case .Extraversion: testScores.Extraversion.updateScore(trait: currentQuestion.questionSubTrait, scoreValue: score)
+            break
+        case .Conscientiousness: testScores.Conscientiousness.updateScore(trait: currentQuestion.questionSubTrait, scoreValue: score)
+            break
+        case.Agreeableness: testScores.Agreeableness.updateScore(trait: currentQuestion.questionSubTrait, scoreValue: score)
+            break
+        case.Neuroticism: testScores.Neuroticism.updateScore(trait: currentQuestion.questionSubTrait, scoreValue: score)
+            break
+        case.Openess: testScores.Openess.updateScore(trait: currentQuestion.questionSubTrait, scoreValue: score)
+            break
         }
     }
 }

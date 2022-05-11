@@ -91,8 +91,6 @@ struct NeuroticismScore{
         default: break
         }
     }
-    
-    
 }
 
 struct OpenessScore{
