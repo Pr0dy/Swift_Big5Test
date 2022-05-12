@@ -284,20 +284,59 @@
             </objects>
             <point key="canvasLocation" x="983" y="82"/>
         </scene>
-        <!--View Controller-->
+        <!--Result Page Controller-->
         <scene sceneID="nJp-kN-1rf">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="rux-JE-LLB" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="rux-JE-LLB" customClass="ResultPageController" customModule="Big5__Personality_Traits_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Fg-2g-9JZ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1l2-IJ-XgK">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bN7-RL-RCi">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your test results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Lc-TN-eyd">
+                                                <rect key="frame" x="98" y="30" width="124" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <constraints>
+                                            <constraint firstItem="4Lc-TN-eyd" firstAttribute="leading" secondItem="bN7-RL-RCi" secondAttribute="leading" constant="98" id="0oQ-sP-GrA"/>
+                                            <constraint firstAttribute="height" constant="1000" id="2hq-6H-az8"/>
+                                            <constraint firstAttribute="trailing" secondItem="4Lc-TN-eyd" secondAttribute="trailing" constant="98" id="d5L-9S-5vf"/>
+                                            <constraint firstItem="4Lc-TN-eyd" firstAttribute="top" secondItem="bN7-RL-RCi" secondAttribute="top" constant="30" id="zoh-CI-O1H"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="bN7-RL-RCi" secondAttribute="trailing" id="RC0-OF-fNh"/>
+                                    <constraint firstItem="bN7-RL-RCi" firstAttribute="width" secondItem="1l2-IJ-XgK" secondAttribute="width" id="Tk9-NJ-Cov"/>
+                                    <constraint firstItem="bN7-RL-RCi" firstAttribute="top" secondItem="1l2-IJ-XgK" secondAttribute="top" id="eVh-xL-5cL"/>
+                                    <constraint firstItem="bN7-RL-RCi" firstAttribute="leading" secondItem="1l2-IJ-XgK" secondAttribute="leading" id="kF5-ge-nZN"/>
+                                    <constraint firstAttribute="bottom" secondItem="bN7-RL-RCi" secondAttribute="bottom" id="q2k-Hj-bdC"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ZLR-UI-syK"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="1l2-IJ-XgK" firstAttribute="top" secondItem="ZLR-UI-syK" secondAttribute="top" id="06O-Wm-7ZC"/>
+                            <constraint firstItem="1l2-IJ-XgK" firstAttribute="bottom" secondItem="ZLR-UI-syK" secondAttribute="bottom" id="3ej-Vr-zvt"/>
+                            <constraint firstItem="1l2-IJ-XgK" firstAttribute="leading" secondItem="ZLR-UI-syK" secondAttribute="leading" id="FM0-6X-8NH"/>
+                            <constraint firstItem="1l2-IJ-XgK" firstAttribute="trailing" secondItem="ZLR-UI-syK" secondAttribute="trailing" id="fgp-oP-fHd"/>
+                        </constraints>
                     </view>
+                    <size key="freeformSize" width="320" height="800"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCA-DD-pPK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1884" y="81"/>
+            <point key="canvasLocation" x="1882.5" y="80.281690140845072"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3NT-56-PLq">

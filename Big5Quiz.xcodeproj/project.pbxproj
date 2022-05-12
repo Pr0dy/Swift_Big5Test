@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		D246279E281A9ADD00A3810E /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D246279D281A9ADD00A3810E /* AppConstants.swift */; };
+		D2586D8A282BD63800714AD0 /* ResultPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2586D89282BD63800714AD0 /* ResultPageController.swift */; };
+		D2586D91282D27A200714AD0 /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2586D8F282D27A200714AD0 /* ResultCell.swift */; };
+		D2586D92282D27A200714AD0 /* ResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2586D90282D27A200714AD0 /* ResultCell.xib */; };
 		D26A2A50282559610095FE6E /* QuizTestScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26A2A4F282559610095FE6E /* QuizTestScores.swift */; };
 		D2D4C16A281956980098C257 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4C169281956980098C257 /* Question.swift */; };
 		D2D4C16C281958060098C257 /* QuestionDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4C16B281958060098C257 /* QuestionDatabase.swift */; };
@@ -23,6 +26,9 @@
 
 /* Begin PBXFileReference section */
 		D246279D281A9ADD00A3810E /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		D2586D89282BD63800714AD0 /* ResultPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPageController.swift; sourceTree = "<group>"; };
+		D2586D8F282D27A200714AD0 /* ResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
+		D2586D90282D27A200714AD0 /* ResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultCell.xib; sourceTree = "<group>"; };
 		D26A2A4F282559610095FE6E /* QuizTestScores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTestScores.swift; sourceTree = "<group>"; };
 		D2D4C169281956980098C257 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		D2D4C16B281958060098C257 /* QuestionDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDatabase.swift; sourceTree = "<group>"; };
@@ -65,6 +71,7 @@
 				D2D4C16B281958060098C257 /* QuestionDatabase.swift */,
 				D2D4C16D28195DC50098C257 /* QuestionEnums.swift */,
 				D26A2A4F282559610095FE6E /* QuizTestScores.swift */,
+				D2586D8F282D27A200714AD0 /* ResultCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -74,6 +81,7 @@
 			children = (
 				D2F622B0281478560092D58C /* LaunchScreen.storyboard */,
 				D2F622AB281478550092D58C /* Main.storyboard */,
+				D2586D90282D27A200714AD0 /* ResultCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -83,6 +91,7 @@
 			children = (
 				D2F622A9281478550092D58C /* QuizViewController.swift */,
 				D2D4C16F281A97B60098C257 /* MenuViewController.swift */,
+				D2586D89282BD63800714AD0 /* ResultPageController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -177,6 +186,7 @@
 			files = (
 				D2F622B2281478560092D58C /* LaunchScreen.storyboard in Resources */,
 				D2F622AF281478560092D58C /* Assets.xcassets in Resources */,
+				D2586D92282D27A200714AD0 /* ResultCell.xib in Resources */,
 				D2F622AD281478550092D58C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,9 +202,11 @@
 				D2D4C16A281956980098C257 /* Question.swift in Sources */,
 				D2D4C16E28195DC50098C257 /* QuestionEnums.swift in Sources */,
 				D246279E281A9ADD00A3810E /* AppConstants.swift in Sources */,
+				D2586D91282D27A200714AD0 /* ResultCell.swift in Sources */,
 				D2D4C170281A97B60098C257 /* MenuViewController.swift in Sources */,
 				D26A2A50282559610095FE6E /* QuizTestScores.swift in Sources */,
 				D2F622A6281478550092D58C /* AppDelegate.swift in Sources */,
+				D2586D8A282BD63800714AD0 /* ResultPageController.swift in Sources */,
 				D2F622A8281478550092D58C /* SceneDelegate.swift in Sources */,
 				D2D4C16C281958060098C257 /* QuestionDatabase.swift in Sources */,
 			);
