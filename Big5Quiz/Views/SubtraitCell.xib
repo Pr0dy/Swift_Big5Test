@@ -88,11 +88,6 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <point key="canvasLocation" x="137.68115942028987" y="140.625"/>
         </tableViewCell>
-        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ztc-ba-x3G">
-            <rect key="frame" x="0.0" y="0.0" width="64" height="32"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <point key="canvasLocation" x="368.11594202898556" y="-70.3125"/>
-        </imageView>
     </objects>
     <resources>
         <image name="chevron.down.circle" catalog="system" width="128" height="121"/>

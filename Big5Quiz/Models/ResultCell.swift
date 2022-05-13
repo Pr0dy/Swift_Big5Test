@@ -1,10 +1,3 @@
-//
-//  ResultCell.swift
-//  Big5Quiz
-//
-//  Created by leandro.banha on 12/05/2022.
-//
-
 import UIKit
 
 class ResultCell: UITableViewCell {
