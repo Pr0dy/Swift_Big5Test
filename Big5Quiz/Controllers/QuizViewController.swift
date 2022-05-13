@@ -65,7 +65,7 @@ class QuizViewController: UIViewController {
             self.questionCounterLabel.text = "Question \(self.currentQuestion) out of \(self.sortedQuestions.count-1)."
             self.questionTextLabel.text = self.sortedQuestions[questionIndex].questionContent
             self.questionTrait.text = String(describing: self.sortedQuestions[questionIndex].questionTrait)
-            self.questionSubtraitLabel.text = String(describing: self.sortedQuestions[questionIndex].questionSubTrait)
+            self.questionSubtraitLabel.text = String(describing: self.sortedQuestions[questionIndex].questionSubTrait)          
             }
         }
     }

@@ -8,54 +8,6 @@ enum Trait{
     case Openess
 }
 
-/*
-enum Extraversion{
-    case Activity
-    case Sympathy
-    case Cheerfulness
-    case Excitement_Seeking
-    case Friendliness
-    case Gregariouness
-}
-
-enum Agreeableness{
-    case Altruism
-    case Cooperation
-    case Modesty
-    case Morality
-    case Assertiveness
-    case Trust
-}
-
-enum Conscientiouness{
-    case Achievement_Striving
-    case Cautiousness
-    case Dutifulness
-    case Orderliness
-    case Self_Discipline
-    case Self_Efficacy
-}
-
-enum Neuroticism{
-    case Anger
-    case Anxiety
-    case Depression
-    case Immoderation
-    case Self_Consciouness
-    case Vulnerability
-}
-
-enum Openess{
-    case Adventurousness
-    case Artistic_Interests
-    case Emotionality
-    case Imagination
-    case Intellect
-    case Liberalism
-}
-
-*/
-
 enum Subtrait{
     //Extraversion Subtraits
     case Activity
