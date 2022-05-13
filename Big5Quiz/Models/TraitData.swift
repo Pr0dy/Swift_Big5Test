@@ -9,7 +9,6 @@ struct TraitData{
 }
 
 struct SubtraitData{
-    var isOpened = Bool()
     var title: String
     var value: Int
     var description: String

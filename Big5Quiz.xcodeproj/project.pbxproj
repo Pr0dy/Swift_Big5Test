@@ -89,8 +89,8 @@
 			children = (
 				D2F622B0281478560092D58C /* LaunchScreen.storyboard */,
 				D2F622AB281478550092D58C /* Main.storyboard */,
-				D2DF40B1282D344A00DE29D1 /* SubtraitCell.xib */,
 				D2DF40BA282D586B00DE29D1 /* ResultCell.xib */,
+				D2DF40B1282D344A00DE29D1 /* SubtraitCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
