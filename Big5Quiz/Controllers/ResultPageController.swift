@@ -15,6 +15,7 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
         self.resultsTable.delegate = self
         self.resultsTable.frame = view.bounds
         self.resultsTable.register(UINib(nibName: constants.resultCellIdentifier, bundle: nil), forCellReuseIdentifier: constants.resultCellIdentifier)
+        self.resultsTable.register(UINib(nibName: constants.resultCellIdentifier, bundle: nil), forCellReuseIdentifier: constants.subtraitCellIdentifier)
         
         self.resultData =
             [TraitData(isOpened: false,title:constants.Extraversion,value:0, data:
@@ -60,15 +61,41 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if resultData![section].isOpened == true{
-            return resultData![section].data.count
+            return resultData![section].data.count + 1
         } else {
             return 1
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let dequeuedCell = tableView.dequeueReusableCell(withIdentifier: constants.resultCellIdentifier, for: indexPath) as? ResultCell
-        
-        return dequeuedCell!
+        if indexPath.row == 0{
+            guard let dequeuedCell = tableView.dequeueReusableCell(withIdentifier: constants.resultCellIdentifier, for: indexPath) as? ResultCell else { return UITableViewCell() }
+            
+            dequeuedCell.textLabel?.text = resultData![indexPath.section].title
+            
+            return dequeuedCell
+        }
+        else {
+            guard let dequeuedCell = tableView.dequeueReusableCell(withIdentifier: constants.subtraitCellIdentifier, for: indexPath) as? SubtraitCell else { return UITableViewCell() }
+            
+            dequeuedCell.textLabel?.text = resultData![indexPath.section].data[indexPath.row-1].title
+            
+            return dequeuedCell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0{
+        if resultData![indexPath.section].isOpened == true{
+            resultData![indexPath.section].isOpened = false
+            let sections = IndexSet.init(integer: indexPath.section)
+            tableView.reloadSections(sections, with: .none)
+            
+        } else {
+            resultData![indexPath.section].isOpened = true
+            let sections = IndexSet.init(integer: indexPath.section)
+            tableView.reloadSections(sections, with: .none)
+        }
+        }
     }
 }

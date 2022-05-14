@@ -1,7 +1,6 @@
 import UIKit
 
 class SubtraitCell: UITableViewCell {
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

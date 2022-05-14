@@ -4,6 +4,7 @@ struct AppConstants{
     let mainScreenToQuickQuestionSegue = "mainScreenToQuickQuestionSegue"
     let quickTest = "Quick Test"
     let resultCellIdentifier = "ResultCell"
+    let subtraitCellIdentifier = "SubtraitCell"
     
     //Traits, subtraits and descriptions
     let Extraversion = "Extraversion"
