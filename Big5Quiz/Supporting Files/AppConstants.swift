@@ -6,6 +6,7 @@ struct AppConstants{
     let resultCellIdentifier = "traitCell"
     let cellHeight = 150
     
+    /*
     //Traits, subtraits and descriptions
     let Extraversion = "Extraversion"
     let ExtraversionDescription = "Extraverts feel a lot of positive emotion, they are sociable, enjoy risk taking, enjoy interacting with others and are high energy."
@@ -52,4 +53,6 @@ struct AppConstants{
     let Imagination = "Imagination"
     let Intellect = "Intellect"
     let Liberalism = "Liberalism"
+    */
 }
+

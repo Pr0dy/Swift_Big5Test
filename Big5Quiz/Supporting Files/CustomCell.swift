@@ -11,7 +11,7 @@ class CustomCell: UITableViewCell {
     @IBOutlet weak var traitName: UILabel!
     @IBOutlet weak var traitScore: UILabel!
     @IBOutlet weak var traitDescription: UILabel!
-    
+    @IBOutlet weak var downImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

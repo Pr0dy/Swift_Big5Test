@@ -4,6 +4,7 @@ struct TraitData{
     var isOpened = Bool()
     var title: String
     var value: Int
+    var description: String
     var data: [SubtraitData]
 }
 
