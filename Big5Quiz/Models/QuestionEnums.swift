@@ -1,11 +1,11 @@
 import Foundation
 
-enum Trait{
-    case Extraversion
-    case Agreeableness
-    case Conscientiousness
-    case Neuroticism
-    case Openess
+enum Trait: String{
+    case Extraversion = "Extraversion"
+    case Agreeableness = "Agreeableness"
+    case Conscientiousness = "Conscientiousness"
+    case Neuroticism = "Neuroticism"
+    case Openess = "Openess"
 }
 
 enum TraitDescription: String{
@@ -16,40 +16,39 @@ enum TraitDescription: String{
     case Openess = "This refers to openess of experience, generally highly open people like to experience various new experiences, whether intelectual, physical, artistic or cultural."
 }
 
-enum Subtrait{
-    //Extraversion Subtraits
-    case Activity
-    case Sympathy
-    case Cheerfulness
-    case Excitement_Seeking
-    case Friendliness
-    case Gregariouness
+enum Subtrait: String{
+    case Activity = "Activity"
+    case Sympathy = "Sympathy"
+    case Cheerfulness = "Cheerfulness"
+    case Excitement_Seeking = "Excitement_Seeking"
+    case Friendliness = "Friendliness"
+    case Gregariouness = "Gregariouness"
     //Agreeableness Subtraits
-    case Altruism
-    case Cooperation
-    case Modesty
-    case Morality
-    case Assertiveness
-    case Trust
+    case Altruism = "Altruism"
+    case Cooperation = "Cooperation"
+    case Modesty = "Modesty"
+    case Morality = "Morality"
+    case Assertiveness = "Assertiveness"
+    case Trust = "Trust"
     //Conscientiousness Subtraits
-    case Achievement_Striving
-    case Cautiousness
-    case Dutifulness
-    case Orderliness
-    case Self_Discipline
-    case Self_Efficacy
+    case Achievement_Striving = "Achievement_Striving"
+    case Cautiousness = "Cautiousness"
+    case Dutifulness = "Dutifulness"
+    case Orderliness = "Orderliness"
+    case Self_Discipline = "Self_Discipline"
+    case Self_Efficacy = "Self_Efficacy"
     //Neuroticism Subtraits
-    case Anger
-    case Anxiety
-    case Depression
-    case Immoderation
-    case Self_Consciouness
-    case Vulnerability
+    case Anger = "Anger"
+    case Anxiety = "Anxiety"
+    case Depression = "Depression"
+    case Immoderation = "Immoderation"
+    case Self_Consciouness = "Self_Consciouness"
+    case Vulnerability = "Vulnerability"
     //Openess Subtraits
-    case Adventurousness
-    case Artistic_Interests
-    case Emotionality
-    case Imagination
-    case Intellect
-    case Liberalism
+    case Adventurousness = "Adventurousness"
+    case Artistic_Interests = "Artistic_Interests"
+    case Emotionality = "Emotionality"
+    case Imagination = "Imagination"
+    case Intellect = "Intellect"
+    case Liberalism = "Liberalism"
 }

@@ -16,41 +16,41 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
         self.resultsTable.frame = view.bounds
         
         self.resultData =
-            [TraitData(isOpened: false,title:constants.Extraversion,value: 0, data:
-            [SubtraitData(title: constants.Activity, value: 0, description: ""),
-            SubtraitData(title: constants.Assertiveness, value: 0, description: ""),
-            SubtraitData(title: constants.Cheerfulness, value: 0, description: ""),
-            SubtraitData(title: constants.Excitement_Seeking, value: 0, description: ""),
-            SubtraitData(title: constants.Friendliness, value: 0, description: ""),
-            SubtraitData(title: constants.Gregariouness, value: 0, description: "")]),
-            TraitData(isOpened: false, title: constants.Agreeableness, value: 0, data:
-             [SubtraitData(title: constants.Altruism, value: 0, description: ""),
-             SubtraitData(title: constants.Cooperation, value: 0, description: ""),
-             SubtraitData(title: constants.Modesty, value: 0, description: ""),
-             SubtraitData(title: constants.Morality, value: 0, description: ""),
-             SubtraitData(title: constants.Sympathy, value: 0, description: ""),
-             SubtraitData(title: constants.Trust, value: 0, description: "")]),
-            TraitData(isOpened: false, title: constants.Conscientiousness, value: 0, data:
-             [SubtraitData(title: constants.Achievement_Striving, value: 0, description: ""),
-             SubtraitData(title: constants.Cautiousness, value: 0, description: ""),
-             SubtraitData(title: constants.Dutifulness, value: 0, description: ""),
-             SubtraitData(title: constants.Orderliness, value: 0, description: ""),
-             SubtraitData(title: constants.Self_Efficacy, value: 0, description: ""),
-             SubtraitData(title: constants.Self_Discipline, value: 0, description: "")]),
-            TraitData(isOpened: false, title: constants.Neuroticism, value: 0, data:
-             [SubtraitData(title: constants.Anger, value: 0, description: ""),
-             SubtraitData(title: constants.Anxiety, value: 0, description: ""),
-             SubtraitData(title: constants.Depression, value: 0, description: ""),
-             SubtraitData(title: constants.Immoderation, value: 0, description: ""),
-             SubtraitData(title: constants.Vulnerability, value: 0, description: ""),
-             SubtraitData(title: constants.Self_Consciouness, value: 0, description: "")]),
-            TraitData(isOpened: false, title: constants.Openess, value: 0, data:
-             [SubtraitData(title: constants.Imagination, value: 0, description: ""),
-             SubtraitData(title: constants.Adventurousness, value: 0, description: ""),
-             SubtraitData(title: constants.Liberalism, value: 0, description: ""),
-             SubtraitData(title: constants.Artistic_Interests, value: 0, description: ""),
-             SubtraitData(title: constants.Intellect, value: 0, description: ""),
-             SubtraitData(title: constants.Emotionality, value: 0, description: "")])]
+        [TraitData(isOpened: false,title: Trait.Extraversion.rawValue, value: 0, data:
+                    [SubtraitData(title: Subtrait.Activity.rawValue, value: 0, description: ""),
+                     SubtraitData(title: Subtrait.Assertiveness.rawValue, value: 0, description: ""),
+                     SubtraitData(title: Subtrait.Cheerfulness.rawValue, value: 0, description: ""),
+                     SubtraitData(title: Subtrait.Excitement_Seeking.rawValue, value: 0, description: ""),
+                     SubtraitData(title: Subtrait.Friendliness.rawValue, value: 0, description: ""),
+                     SubtraitData(title: Subtrait.Gregariouness.rawValue, value: 0, description: "")]),
+         TraitData(isOpened: false, title: Trait.Agreeableness.rawValue, value: 0, data:
+                    [SubtraitData(title: Subtrait.Altruism.rawValue, value: 0, description: ""),
+                     SubtraitData(title: Subtrait.Cooperation.rawValue, value: 0, description: ""),
+                     SubtraitData(title: Subtrait.Modesty.rawValue, value: 0, description: ""),
+                     SubtraitData(title: Subtrait.Morality.rawValue, value: 0, description: ""),
+                     SubtraitData(title: Subtrait.Sympathy.rawValue, value: 0, description: ""),
+                     SubtraitData(title: Subtrait.Trust.rawValue, value: 0, description: "")]),
+         TraitData(isOpened: false, title: Trait.Conscientiousness.rawValue, value: 0, data:
+                        [SubtraitData(title: Subtrait.Achievement_Striving.rawValue, value: 0, description: ""),
+                         SubtraitData(title: Subtrait.Cautiousness.rawValue, value: 0, description: ""),
+                         SubtraitData(title: Subtrait.Dutifulness.rawValue, value: 0, description: ""),
+                         SubtraitData(title: Subtrait.Orderliness.rawValue, value: 0, description: ""),
+                         SubtraitData(title: Subtrait.Self_Efficacy.rawValue, value: 0, description: ""),
+                         SubtraitData(title: Subtrait.Self_Discipline.rawValue, value: 0, description: "")]),
+         TraitData(isOpened: false, title: Trait.Neuroticism.rawValue, value: 0, data:
+                    [SubtraitData(title: Subtrait.Anger.rawValue, value: 0, description: ""),
+                     SubtraitData(title: Subtrait.Anxiety.rawValue, value: 0, description: ""),
+                     SubtraitData(title: Subtrait.Depression.rawValue, value: 0, description: ""),
+                     SubtraitData(title: Subtrait.Immoderation.rawValue, value: 0, description: ""),
+                     SubtraitData(title: Subtrait.Vulnerability.rawValue, value: 0, description: ""),
+                     SubtraitData(title: Subtrait.Self_Consciouness.rawValue, value: 0, description: "")]),
+         TraitData(isOpened: false, title: Trait.Openess.rawValue, value: 0, data:
+                    [SubtraitData(title: Subtrait.Imagination.rawValue, value: 0, description: ""),
+                     SubtraitData(title: Subtrait.Adventurousness.rawValue, value: 0, description: ""),
+                     SubtraitData(title: Subtrait.Liberalism.rawValue, value: 0, description: ""),
+                     SubtraitData(title: Subtrait.Artistic_Interests.rawValue, value: 0, description: ""),
+                     SubtraitData(title: Subtrait.Intellect.rawValue, value: 0, description: ""),
+                     SubtraitData(title: Subtrait.Emotionality.rawValue, value: 0, description: "")])]
     }
     
     func traitScoreLabel(score: Int) -> String{
@@ -99,9 +99,7 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         else {
             guard let dequeuedCell = tableView.dequeueReusableCell(withIdentifier: constants.resultCellIdentifier, for: indexPath) as? CustomCell else { return UITableViewCell() }
-            
-            /*dequeuedCell.traitName.text = resultData![indexPath.section].data[indexPath.row-1].title*/
-            
+        
             return dequeuedCell
             }
         }
