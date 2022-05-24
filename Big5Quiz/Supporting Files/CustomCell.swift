@@ -8,9 +8,9 @@
 import UIKit
 
 class CustomCell: UITableViewCell {
-
     @IBOutlet weak var traitName: UILabel!
     @IBOutlet weak var traitScore: UILabel!
+    @IBOutlet weak var traitDescription: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

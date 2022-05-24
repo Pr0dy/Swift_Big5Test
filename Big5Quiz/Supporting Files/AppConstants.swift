@@ -3,8 +3,8 @@ import Foundation
 struct AppConstants{
     let mainScreenToQuickQuestionSegue = "mainScreenToQuickQuestionSegue"
     let quickTest = "Quick Test"
-    let resultCellIdentifier = "ResultCell"
-    let subtraitCellIdentifier = "SubtraitCell"
+    let resultCellIdentifier = "traitCell"
+    let cellHeight = 150
     
     //Traits, subtraits and descriptions
     let Extraversion = "Extraversion"
