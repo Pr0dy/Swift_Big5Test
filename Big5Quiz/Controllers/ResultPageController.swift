@@ -8,17 +8,15 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
     
     let constants = AppConstants()
     var resultData: [TraitData]?
-    
+    var testScores = QuizTestScores()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.resultsTable.dataSource = self
         self.resultsTable.delegate = self
         self.resultsTable.frame = view.bounds
-        self.resultsTable.register(UINib(nibName: constants.resultCellIdentifier, bundle: nil), forCellReuseIdentifier: constants.resultCellIdentifier)
-        self.resultsTable.register(UINib(nibName: constants.resultCellIdentifier, bundle: nil), forCellReuseIdentifier: constants.subtraitCellIdentifier)
         
         self.resultData =
-            [TraitData(isOpened: false,title:constants.Extraversion,value:0, data:
+            [TraitData(isOpened: false,title:constants.Extraversion,value: 0, data:
             [SubtraitData(title: constants.Activity, value: 0, description: ""),
             SubtraitData(title: constants.Assertiveness, value: 0, description: ""),
             SubtraitData(title: constants.Cheerfulness, value: 0, description: ""),
@@ -55,34 +53,59 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
              SubtraitData(title: constants.Emotionality, value: 0, description: "")])]
     }
     
+    func traitScoreLabel(score: Int) -> String{
+        switch score{
+        case 0...10: return "Extremely Low (\(score))"
+        case 11...24: return "Very Low (\(score))"
+        case 25...39: return "Low (\(score))"
+        case 40...48: return "Below Average (\(score))"
+        case 48...52: return "About Average (\(score))"
+        case 53...60: return "Above Average (\(score))"
+        case 61...74: return "High (\(score))"
+        case 75...89: return "Very High (\(score))"
+        case 90...100: return "Extremely High (\(score))" 
+           default: break
+        }
+        return ""
+    }
+    
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 5
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if resultData![section].isOpened == true{
-            return resultData![section].data.count + 1
+            return resultData![section].data.count + 2
         } else {
             return 1
         }
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(constants.cellHeight)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0{
-            guard let dequeuedCell = tableView.dequeueReusableCell(withIdentifier: constants.resultCellIdentifier, for: indexPath) as? ResultCell else { return UITableViewCell() }
+            guard let dequeuedCell = tableView.dequeueReusableCell(withIdentifier: constants.resultCellIdentifier, for: indexPath) as? CustomCell else { return UITableViewCell() }
             
-            dequeuedCell.textLabel?.text = resultData![indexPath.section].title
+            dequeuedCell.selectionStyle = .none
+
+            dequeuedCell.traitName.text = resultData![indexPath.section].title
+            dequeuedCell.traitScore.text = traitScoreLabel(score: resultData![indexPath.section].value)
             
             return dequeuedCell
         }
         else {
-            guard let dequeuedCell = tableView.dequeueReusableCell(withIdentifier: constants.subtraitCellIdentifier, for: indexPath) as? SubtraitCell else { return UITableViewCell() }
+            guard let dequeuedCell = tableView.dequeueReusableCell(withIdentifier: constants.resultCellIdentifier, for: indexPath) as? CustomCell else { return UITableViewCell() }
             
-            dequeuedCell.textLabel?.text = resultData![indexPath.section].data[indexPath.row-1].title
+            /*dequeuedCell.traitName.text = resultData![indexPath.section].data[indexPath.row-1].title*/
             
             return dequeuedCell
+            }
         }
-    }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0{

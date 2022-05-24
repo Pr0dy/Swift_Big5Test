@@ -1,20 +1,26 @@
+//
+//  CustomCell.swift
+//  Big5Quiz
+//
+//  Created by leandro.banha on 24/05/2022.
+//
+
 import UIKit
 
-class ResultCell: UITableViewCell {
+class CustomCell: UITableViewCell {
 
+    @IBOutlet weak var traitName: UILabel!
+    @IBOutlet weak var traitScore: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    @IBOutlet weak var traitScore: UILabel!
-    @IBOutlet weak var traitName: UILabel!
-    @IBOutlet weak var traitDescription: UILabel!
-    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
-    
+
 }

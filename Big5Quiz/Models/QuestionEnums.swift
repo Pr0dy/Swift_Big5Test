@@ -8,6 +8,14 @@ enum Trait{
     case Openess
 }
 
+enum TraitDescription: String{
+    case Extraversion = "Extraverts feel a lot of positive emotion, they are sociable, enjoy risk taking, enjoy interacting with others and are high energy."
+    case Agreeableness = "Agreeable people go out of their way and make effort to have positive relationships with others, high agreeable people are modest, trustworthy and enjoy cooperation over competition."
+    case Conscientiousness = "People high in conscientiousness are responsible, work hard, enjoy order and cleanliness and keep their word."
+    case Neuroticism = "Neuroticism describes feedback to negative emotion, people low on neuroticism experience low levels of anger, stress, anxiety and overall unhapiness"
+    case Openess = "This refers to openess of experience, generally highly open people like to experience various new experiences, whether intelectual, physical, artistic or cultural."
+}
+
 enum Subtrait{
     //Extraversion Subtraits
     case Activity
