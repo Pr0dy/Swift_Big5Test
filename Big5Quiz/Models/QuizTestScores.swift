@@ -9,18 +9,18 @@ struct QuizTestScores{
 }
 
 struct ExtraversionScore{
-    var activityScore = 0, sympathyScore = 0, cheerfulnessScore = 0,  excitementSeekingScore = 0, friendlinessScore = 0, gregariounessScore = 0
+    var activityScore = 0, assertivenessScore = 0, cheerfulnessScore = 0,  excitementSeekingScore = 0, friendlinessScore = 0, gregariounessScore = 0
     
     var traitScore: Int {
         get{
-            return (activityScore + sympathyScore + cheerfulnessScore + excitementSeekingScore + friendlinessScore + gregariounessScore / 6) * 100
+            return (activityScore + assertivenessScore + cheerfulnessScore + excitementSeekingScore + friendlinessScore + gregariounessScore / 6) * 100
         }
     }
     
     mutating func updateScore(trait: Subtrait, scoreValue: Int){
         switch trait{
         case .Activity: activityScore += scoreValue; break;
-        case .Sympathy: sympathyScore += scoreValue; break;
+        case .Assertiveness: assertivenessScore += scoreValue; break;
         case .Cheerfulness: cheerfulnessScore += scoreValue; break;
         case .Excitement_Seeking: excitementSeekingScore += scoreValue; break;
         case .Friendliness: friendlinessScore += scoreValue; break;
@@ -31,10 +31,10 @@ struct ExtraversionScore{
 }
 
 struct AgreeablenessScore{
-    var altruismScore = 0, cooperationScore = 0, modestyScore = 0, moralityScore = 0, assertivenessScore = 0 ,trustScore = 0
+    var altruismScore = 0, cooperationScore = 0, modestyScore = 0, moralityScore = 0, sympathyScore = 0 ,trustScore = 0
     var traitScore: Int {
         get{
-            return (altruismScore + cooperationScore + modestyScore + moralityScore + assertivenessScore + trustScore / 6) * 100
+            return (altruismScore + cooperationScore + modestyScore + moralityScore + sympathyScore + trustScore / 6) * 100
         }
     }
     
@@ -44,7 +44,7 @@ struct AgreeablenessScore{
         case .Cooperation: cooperationScore += scoreValue; break;
         case .Modesty: modestyScore += scoreValue; break;
         case .Morality: moralityScore += scoreValue; break;
-        case .Assertiveness: altruismScore += scoreValue; break;
+        case .Sympathy: sympathyScore += scoreValue; break;
         case .Trust: trustScore += scoreValue; break;
         default: break
         }

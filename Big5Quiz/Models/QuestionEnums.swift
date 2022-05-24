@@ -18,7 +18,7 @@ enum TraitDescription: String{
 
 enum Subtrait: String{
     case Activity = "Activity"
-    case Sympathy = "Sympathy"
+    case Assertiveness = "Assertiveness"
     case Cheerfulness = "Cheerfulness"
     case Excitement_Seeking = "Excitement_Seeking"
     case Friendliness = "Friendliness"
@@ -28,7 +28,7 @@ enum Subtrait: String{
     case Cooperation = "Cooperation"
     case Modesty = "Modesty"
     case Morality = "Morality"
-    case Assertiveness = "Assertiveness"
+    case Sympathy = "Sympathy"
     case Trust = "Trust"
     //Conscientiousness Subtraits
     case Achievement_Striving = "Achievement_Striving"
