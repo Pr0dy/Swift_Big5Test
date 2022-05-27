@@ -12,6 +12,7 @@ class QuizViewController: UIViewController {
     var questions = QuestionDatabase()
     var testQuestions = [Question]()
     var testScores = QuizTestScores()
+
     var testType: String?
     var currentQuestion = 1
     let questionsPerSubtrait = 2
@@ -19,6 +20,7 @@ class QuizViewController: UIViewController {
     override func viewDidLoad(){
         super.viewDidLoad()
         quizTypeLabel.text = testType
+        
         prepareQuiz()
         displayQuestion(questionIndex: 1)
     }
@@ -48,19 +50,19 @@ class QuizViewController: UIViewController {
     @IBAction func optionPressed(_ sender: UIButton) {
                 
         switch sender.titleLabel?.text{
-        case "Strongly Agree":
+        case "Agree":
             traitSelect(currentQuestion: testQuestions[currentQuestion], firstScore: 100, lastScore: 0)
             break
-        case "Agree":
+        case "Moslty Agree":
             traitSelect(currentQuestion: testQuestions[currentQuestion], firstScore: 75, lastScore: 25)
             break
-        case "Neutral":
+        case "Depends":
             traitSelect(currentQuestion: testQuestions[currentQuestion], firstScore: 50, lastScore: 50)
             break
-        case "Disagree":
+        case "Mostly Disagree":
             traitSelect(currentQuestion: testQuestions[currentQuestion], firstScore: 25, lastScore: 75)
             break
-        case "Strongly Disagree":
+        case "Disagree":
             traitSelect(currentQuestion: testQuestions[currentQuestion], firstScore: 0, lastScore: 100)
             break
         default: break
