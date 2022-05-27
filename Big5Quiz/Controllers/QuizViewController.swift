@@ -20,7 +20,6 @@ class QuizViewController: UIViewController {
     override func viewDidLoad(){
         super.viewDidLoad()
         quizTypeLabel.text = testType
-        
         prepareQuiz()
         displayQuestion(questionIndex: 1)
     }

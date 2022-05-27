@@ -17,6 +17,7 @@
 		D2D4C170281A97B60098C257 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D4C16F281A97B60098C257 /* MenuViewController.swift */; };
 		D2DF40BE282E61BF00DE29D1 /* TraitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DF40BD282E61BF00DE29D1 /* TraitData.swift */; };
 		D2EB6DD5284110DE004DCA39 /* ResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EB6DD4284110DE004DCA39 /* ResultData.swift */; };
+		D2EB6DD728411D29004DCA39 /* ResultCellColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EB6DD628411D29004DCA39 /* ResultCellColors.swift */; };
 		D2F622A6281478550092D58C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F622A5281478550092D58C /* AppDelegate.swift */; };
 		D2F622A8281478550092D58C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F622A7281478550092D58C /* SceneDelegate.swift */; };
 		D2F622AA281478550092D58C /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F622A9281478550092D58C /* QuizViewController.swift */; };
@@ -36,6 +37,7 @@
 		D2D4C16F281A97B60098C257 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		D2DF40BD282E61BF00DE29D1 /* TraitData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitData.swift; sourceTree = "<group>"; };
 		D2EB6DD4284110DE004DCA39 /* ResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultData.swift; sourceTree = "<group>"; };
+		D2EB6DD628411D29004DCA39 /* ResultCellColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCellColors.swift; sourceTree = "<group>"; };
 		D2F622A2281478550092D58C /* Big5  Personality Traits Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Big5  Personality Traits Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F622A5281478550092D58C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2F622A7281478550092D58C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				D2F622AE281478560092D58C /* Assets.xcassets */,
 				D2D3C409283D0DAB002D3613 /* CustomCell.swift */,
 				D246279D281A9ADD00A3810E /* AppConstants.swift */,
+				D2EB6DD628411D29004DCA39 /* ResultCellColors.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2EB6DD728411D29004DCA39 /* ResultCellColors.swift in Sources */,
 				D2F622AA281478550092D58C /* QuizViewController.swift in Sources */,
 				D2D4C16A281956980098C257 /* Question.swift in Sources */,
 				D2D4C16E28195DC50098C257 /* QuestionEnums.swift in Sources */,

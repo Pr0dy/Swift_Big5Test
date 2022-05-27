@@ -1,7 +1,8 @@
 import Foundation
 
 struct ResultData{
-    let testScores: QuizTestScores?
+    
+let testScores: QuizTestScores?
     let resultData: [TraitData]
     
     init(quizTestScores: QuizTestScores){

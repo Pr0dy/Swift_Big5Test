@@ -9,6 +9,17 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
     let constants = AppConstants()
     var resultData: [TraitData]?
     var testScores = QuizTestScores()
+    let cellColors = ResultCellColors()
+    
+    @IBAction func returnButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: constants.resultPageToMenuSegue, sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == constants.resultPageToMenuSegue{
+            let nextVC = segue.destination as! MenuViewController
+      }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,13 +32,13 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
     func traitScoreLabel(score: Int) -> String{
         switch score{
         case 0...10: return "Extremely Low (\(score))"
-        case 11...24: return "Very Low (\(score))"
-        case 25...39: return "Low (\(score))"
-        case 40...48: return "Below Average (\(score))"
-        case 48...52: return "About Average (\(score))"
-        case 53...60: return "Above Average (\(score))"
-        case 61...74: return "High (\(score))"
-        case 75...89: return "Very High (\(score))"
+        case 11...20: return "Very Low (\(score))"
+        case 21...30: return "Low (\(score))"
+        case 31...45: return "Below Average (\(score))"
+        case 46...54: return "About Average (\(score))"
+        case 55...69: return "Above Average (\(score))"
+        case 70...79: return "High (\(score))"
+        case 80...89: return "Very High (\(score))"
         case 90...100: return "Extremely High (\(score))" 
            default: break
         }
@@ -62,6 +73,7 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
             dequeuedCell.traitName.text = resultData![indexPath.section].title
             dequeuedCell.traitScore.text = traitScoreLabel(score: resultData![indexPath.section].value)
             dequeuedCell.traitDescription.text =  resultData![indexPath.section].description
+            cellColour(cell: dequeuedCell, trait: resultData![indexPath.section].title)
             
             return dequeuedCell
         }
@@ -72,7 +84,7 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
             dequeuedCell.traitName.text = resultData![indexPath.section].data[indexPath.row-1].title
             dequeuedCell.traitScore.text = traitScoreLabel(score: resultData![indexPath.section].data[indexPath.row-1].value)
             dequeuedCell.traitDescription.text =  resultData![indexPath.section].data[indexPath.row-1].description
-
+            cellColour(cell: dequeuedCell, trait: resultData![indexPath.section].title)
         
             return dequeuedCell
             }
@@ -91,6 +103,17 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
             let sections = IndexSet.init(integer: indexPath.section)
             tableView.reloadSections(sections, with: .none)
         }
+        }
+    }
+    
+    func cellColour(cell: CustomCell, trait: String){
+        switch trait{
+        case "Agreeableness": cell.backgroundColor = cellColors.agreeablenessColor;  break;
+        case "Extraversion": cell.backgroundColor = cellColors.extraversionColor;  break;
+        case "Conscientiousness": cell.backgroundColor = cellColors.conscientiounessColor;  break;
+        case "Openess": cell.backgroundColor = cellColors.openenessColor;  break;
+        case "Neuroticism": cell.backgroundColor = cellColors.neuroticismColor;  break;
+        default: break;
         }
     }
 }

@@ -2,8 +2,9 @@ import Foundation
 
 struct AppConstants{
     let mainScreenToQuickQuestionSegue = "mainScreenToQuickQuestionSegue"
+    let resultPageToMenuSegue = "backToMenu"
     let quickTest = "Quick Test"
     let resultCellIdentifier = "traitCell"
-    let cellHeight = 150
+    let cellHeight = 170
 }
 
