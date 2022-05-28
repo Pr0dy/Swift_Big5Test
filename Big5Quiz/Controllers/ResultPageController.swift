@@ -8,7 +8,7 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
     
     let constants = AppConstants()
     var resultData: [TraitData]?
-    var testScores = QuizTestScores()
+    var testScores: QuizTestScores?
     let cellColors = ResultCellColors()
     
     @IBAction func returnButtonPressed(_ sender: UIButton) {
@@ -26,7 +26,7 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
         self.resultsTable.dataSource = self
         self.resultsTable.delegate = self
         self.resultsTable.frame = view.bounds
-        self.resultData = ResultData(quizTestScores: testScores).resultData
+        self.resultData = ResultData(quizTestScores: testScores!).resultData
     }
     
     func traitScoreLabel(score: Int) -> String{

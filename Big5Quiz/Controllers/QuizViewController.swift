@@ -12,16 +12,17 @@ class QuizViewController: UIViewController {
     var questions = QuestionDatabase()
     var testQuestions = [Question]()
     var testScores = QuizTestScores()
+    var constants = AppConstants()
 
     var testType: String?
-    var currentQuestion = 1
+    var currentQuestion = 0
     let questionsPerSubtrait = 2
     
     override func viewDidLoad(){
         super.viewDidLoad()
         quizTypeLabel.text = testType
         prepareQuiz()
-        displayQuestion(questionIndex: 1)
+        displayQuestion(questionIndex: 0)
     }
     
     func prepareQuiz(){
@@ -37,9 +38,12 @@ class QuizViewController: UIViewController {
         
         for subtraitQuestionsArr in questions {
             for question in subtraitQuestionsArr {
-                if count <= questionsPerSubtrait{
+                if count < questionsPerSubtrait{
                 testQuestions.append(question)
                 count += 1
+                } else {
+                    count = 0
+                    break
                 }
             }
         }
@@ -74,15 +78,27 @@ class QuizViewController: UIViewController {
 
     
     func displayQuestion(questionIndex: Int){
-        if questionIndex <= testQuestions.count{
+        if questionIndex != testQuestions.count{
         DispatchQueue.main.async {
-            self.questionCounterLabel.text = "Question \(self.currentQuestion) out of \(self.testQuestions.count-1)."
+            self.questionCounterLabel.text = "Question \(self.currentQuestion+1) out of \(self.testQuestions.count)."
             self.questionTextLabel.text = self.testQuestions[questionIndex].questionContent
             self.questionTrait.text = String(describing: self.testQuestions[questionIndex].questionTrait)
             self.questionSubtraitLabel.text = String(describing: self.testQuestions[questionIndex].questionSubTrait)
-            }
         }
+        } else {
+            performSegue(withIdentifier: constants.questionsToResultSegue, sender: self)
+        }
+            
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == constants.questionsToResultSegue{
+            let nextVC = segue.destination as! ResultPageController
+            nextVC.testScores = self.testScores
+      }
+    }
+
     
     func traitSelect(currentQuestion: Question, firstScore: Int, lastScore: Int){
         var score: Int
