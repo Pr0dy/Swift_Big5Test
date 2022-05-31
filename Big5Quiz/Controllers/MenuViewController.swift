@@ -16,9 +16,10 @@ class MenuViewController: UIViewController{
             let nextVC = segue.destination as! QuizViewController
             nextVC.testType = self.testType
         }
-        if segue.identifier == constants.menuToResultPageSegue{
+        else if segue.identifier == constants.menuToResultPageSegue{
             let nextVC = segue.destination as! ResultPageController
             nextVC.testScores = self.previousTestResults
+            nextVC.saveResults = true
         }
     }
     
@@ -30,6 +31,13 @@ class MenuViewController: UIViewController{
         if self.previousTestResults != nil {
         self.testType = constants.quickTest
         performSegue(withIdentifier: constants.menuToResultPageSegue, sender: self)
+        } else {
+            let alert = UIAlertController(title: "No results saved :(", message: "Make a test then save the results!", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Back", style: .cancel, handler: { action in
+            }))
+            
+            present(alert,animated: true)
         }
     }
 }

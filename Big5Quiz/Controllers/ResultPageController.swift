@@ -21,9 +21,9 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
         self.resultData = ResultData(quizTestScores: testScores!).resultData
         
         if saveResults == false{
-            saveButton.setTitle("Remove results", for: .normal)
-        } else {
             saveButton.setTitle("Save results", for: .normal)
+        } else {
+            saveButton.setTitle("Remove results", for: .normal)
         }
         
     }
@@ -63,6 +63,8 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
             let nextVC = segue.destination as! MenuViewController
             if saveResults == true{
                 nextVC.previousTestResults = self.testScores
+            } else {
+                nextVC.previousTestResults = nil
             }
       }
     }
