@@ -11,6 +11,14 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
     var testScores: QuizTestScores?
     let cellColors = ResultCellColors()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.resultsTable.dataSource = self
+        self.resultsTable.delegate = self
+        self.resultsTable.frame = view.bounds
+        self.resultData = ResultData(quizTestScores: testScores!).resultData
+    }
+    
     @IBAction func returnButtonPressed(_ sender: UIButton) {
         performSegue(withIdentifier: constants.resultPageToMenuSegue, sender: self)
     }
@@ -19,14 +27,6 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
         if segue.identifier == constants.resultPageToMenuSegue{
             let nextVC = segue.destination as! MenuViewController
       }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.resultsTable.dataSource = self
-        self.resultsTable.delegate = self
-        self.resultsTable.frame = view.bounds
-        self.resultData = ResultData(quizTestScores: testScores!).resultData
     }
     
     func traitScoreLabel(score: Int) -> String{

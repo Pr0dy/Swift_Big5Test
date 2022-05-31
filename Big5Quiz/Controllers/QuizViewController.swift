@@ -16,7 +16,6 @@ class QuizViewController: UIViewController {
 
     var testType: String?
     var currentQuestion = 0
-    let questionsPerSubtrait = 2
     
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -38,7 +37,7 @@ class QuizViewController: UIViewController {
         
         for subtraitQuestionsArr in questions {
             for question in subtraitQuestionsArr {
-                if count < questionsPerSubtrait{
+                if count < numberOfQuestions{
                 testQuestions.append(question)
                 count += 1
                 } else {
@@ -48,7 +47,7 @@ class QuizViewController: UIViewController {
             }
         }
     }
-
+ 
     
     @IBAction func optionPressed(_ sender: UIButton) {
                 
