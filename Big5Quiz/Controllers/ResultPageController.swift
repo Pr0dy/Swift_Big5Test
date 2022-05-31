@@ -11,6 +11,8 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
     var testScores: QuizTestScores?
     let cellColors = ResultCellColors()
     var saveResults = false
+    var showBIG5Page = false
+    
     @IBOutlet weak var saveButton: UIButton!
     
     override func viewDidLoad() {

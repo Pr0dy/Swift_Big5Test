@@ -21,12 +21,17 @@ class MenuViewController: UIViewController{
             nextVC.testScores = self.previousTestResults
             nextVC.saveResults = true
         }
+        else if segue.identifier == constants.menuToBIG5traitsScreenSegue{
+            let nextVC = segue.destination as! ResultPageController
+            nextVC.showBIG5Page = true
+        }
     }
     
     @IBAction func pressedQuickTest(_ sender: Any) {
         self.testType = constants.quickTest
         performSegue(withIdentifier: constants.mainScreenToQuickQuestionSegue, sender: self)
     }
+    
     @IBAction func pressedMyResultsButton(_ sender: Any) {
         if self.previousTestResults != nil {
         self.testType = constants.quickTest
@@ -40,4 +45,9 @@ class MenuViewController: UIViewController{
             present(alert,animated: true)
         }
     }
+    @IBAction func pressedBIG5Button(_ sender: UIButton) {
+        self.testType = constants.quickTest
+        performSegue(withIdentifier: constants.menuToBIG5traitsScreenSegue, sender: self)
+        }
+    
 }
