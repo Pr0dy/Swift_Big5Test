@@ -53,6 +53,9 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
                                             <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="pressedMyResultsButton:" destination="rZF-pG-YZZ" eventType="touchUpInside" id="uyR-8m-ZqI"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUI-r7-PZO">
                                         <rect key="frame" x="0.0" y="229.5" width="180" height="68.5"/>
@@ -101,11 +104,12 @@
                     <navigationItem key="navigationItem" id="cxB-14-CQg"/>
                     <connections>
                         <segue destination="g4V-ac-QB7" kind="presentation" identifier="mainScreenToQuickQuestionSegue" id="ggs-kv-aMO"/>
+                        <segue destination="rux-JE-LLB" kind="presentation" identifier="menuToResults" id="lIo-Ys-1xA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LDi-6r-DM2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="99.375" y="83.450704225352112"/>
+            <point key="canvasLocation" x="69" y="56"/>
         </scene>
         <!--Quiz View Controller-->
         <scene sceneID="5HC-Dw-cOc">
@@ -282,7 +286,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faV-Pi-Nt3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="983" y="82"/>
+            <point key="canvasLocation" x="1052" y="56"/>
         </scene>
         <!--Result Page Controller-->
         <scene sceneID="nJp-kN-1rf">
@@ -397,6 +401,9 @@
                                                         <buttonConfiguration key="configuration" style="filled" title="Save results">
                                                             <color key="baseBackgroundColor" red="0.55686277149999996" green="0.1607843041" blue="0.14509806040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="pressedSaveResultsButton:" destination="rux-JE-LLB" eventType="touchUpInside" id="N6U-5t-5Eh"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFm-m0-aeq">
                                                         <rect key="frame" x="163.5" y="0.0" width="102.5" height="31"/>
@@ -444,6 +451,7 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="nDH-sQ-pHS"/>
                     <size key="freeformSize" width="320" height="800"/>
                     <connections>
                         <outlet property="resultsTable" destination="0bz-z0-OlT" id="9wG-gE-JSL"/>
@@ -452,7 +460,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCA-DD-pPK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1937" y="396"/>
+            <point key="canvasLocation" x="1988" y="81"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3NT-56-PLq">
@@ -474,6 +482,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="lIo-Ys-1xA"/>
         <segue reference="FBq-9H-Cff"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

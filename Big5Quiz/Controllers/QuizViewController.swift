@@ -94,6 +94,7 @@ class QuizViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == constants.questionsToResultSegue{
             let nextVC = segue.destination as! ResultPageController
+            self.testScores.averageSubtraitScores()
             nextVC.testScores = self.testScores
       }
     }
@@ -108,17 +109,6 @@ class QuizViewController: UIViewController {
             score = lastScore
         }
         
-        switch currentQuestion.questionTrait{
-        case .Extraversion: testScores.Extraversion.updateScore(trait: currentQuestion.questionSubTrait, scoreValue: score)
-            break
-        case .Conscientiousness: testScores.Conscientiousness.updateScore(trait: currentQuestion.questionSubTrait, scoreValue: score)
-            break
-        case.Agreeableness: testScores.Agreeableness.updateScore(trait: currentQuestion.questionSubTrait, scoreValue: score)
-            break
-        case.Neuroticism: testScores.Neuroticism.updateScore(trait: currentQuestion.questionSubTrait, scoreValue: score)
-            break
-        case.Openess: testScores.Openess.updateScore(trait: currentQuestion.questionSubTrait, scoreValue: score)
-            break
-        }
+        testScores.updateScore(trait: currentQuestion.questionSubTrait, scoreValue: score)
     }
 }

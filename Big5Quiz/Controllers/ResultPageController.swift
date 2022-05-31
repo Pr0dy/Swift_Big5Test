@@ -10,6 +10,7 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
     var resultData: [TraitData]?
     var testScores: QuizTestScores?
     let cellColors = ResultCellColors()
+    var saveResults = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +24,19 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
         performSegue(withIdentifier: constants.resultPageToMenuSegue, sender: self)
     }
     
+    @IBAction func pressedSaveResultsButton(_ sender: UIButton) {
+        if saveResults == false{
+            saveResults = true
+        }
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == constants.resultPageToMenuSegue{
             let nextVC = segue.destination as! MenuViewController
+            if saveResults == true{
+                nextVC.previousTestResults = self.testScores
+            }
       }
     }
     
