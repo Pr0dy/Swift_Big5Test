@@ -14,13 +14,22 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
     var showBIG5Page = false
     
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.resultsTable.dataSource = self
         self.resultsTable.delegate = self
         self.resultsTable.frame = view.bounds
+        
+        if showBIG5Page == false {
         self.resultData = ResultData(quizTestScores: testScores!).resultData
+        } else {
+            titleLabel.text = "The BIG 5 Traits"
+            saveButton.isHidden = true
+            
+            self.resultData = ResultData(quizTestScores: QuizTestScores()).resultData
+        }
         
         if saveResults == false{
             saveButton.setTitle("Save results", for: .normal)
@@ -113,7 +122,14 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
             dequeuedCell.downImage.image = UIImage(systemName: "arrow.down.app.fill")
                         
             dequeuedCell.traitName.text = resultData![indexPath.section].title
+            
+            if showBIG5Page == false{
             dequeuedCell.traitScore.text = traitScoreLabel(score: resultData![indexPath.section].value)
+            } else {
+                dequeuedCell.traitScore.isHidden = true
+            }
+                
+                
             dequeuedCell.traitDescription.text =  resultData![indexPath.section].description
             cellColour(cell: dequeuedCell, trait: resultData![indexPath.section].title)
             
@@ -124,7 +140,13 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
             
             dequeuedCell.downImage.image = nil
             dequeuedCell.traitName.text = resultData![indexPath.section].data[indexPath.row-1].title
+            if showBIG5Page == false{
             dequeuedCell.traitScore.text = traitScoreLabel(score: resultData![indexPath.section].data[indexPath.row-1].value)
+        } else {
+            dequeuedCell.traitScore.isHidden = true
+        }
+            
+            
             dequeuedCell.traitDescription.text =  resultData![indexPath.section].data[indexPath.row-1].description
             cellColour(cell: dequeuedCell, trait: resultData![indexPath.section].title)
         

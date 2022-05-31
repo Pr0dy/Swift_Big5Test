@@ -461,6 +461,7 @@
                     <connections>
                         <outlet property="resultsTable" destination="0bz-z0-OlT" id="9wG-gE-JSL"/>
                         <outlet property="saveButton" destination="gFm-Ab-8kt" id="Ux1-vx-iLi"/>
+                        <outlet property="titleLabel" destination="4Lc-TN-eyd" id="P3i-th-c20"/>
                         <segue destination="rZF-pG-YZZ" kind="presentation" identifier="backToMenu" modalPresentationStyle="fullScreen" id="FBq-9H-Cff"/>
                     </connections>
                 </viewController>
