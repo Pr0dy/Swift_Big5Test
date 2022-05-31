@@ -11,6 +11,7 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
     var testScores: QuizTestScores?
     let cellColors = ResultCellColors()
     var saveResults = false
+    @IBOutlet weak var saveButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,17 +19,43 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
         self.resultsTable.delegate = self
         self.resultsTable.frame = view.bounds
         self.resultData = ResultData(quizTestScores: testScores!).resultData
+        
+        if saveResults == false{
+            saveButton.setTitle("Remove results", for: .normal)
+        } else {
+            saveButton.setTitle("Save results", for: .normal)
+        }
+        
     }
     
     @IBAction func returnButtonPressed(_ sender: UIButton) {
         performSegue(withIdentifier: constants.resultPageToMenuSegue, sender: self)
     }
     
+    func showAlert(title: String, message: String){
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Back", style: .cancel, handler: { action in
+        }))
+        
+        present(alert,animated: true)
+    }
+    
     @IBAction func pressedSaveResultsButton(_ sender: UIButton) {
         if saveResults == false{
             saveResults = true
+            showAlert(title: "Saving results..", message: "Sucessful!")
+            sender.setTitle("Remove results", for: .normal)
+        } else {
+            saveResults = false
+            showAlert(title: "Removing results..", message: "Sucessful!")
+            sender.setTitle("Save results", for: .normal)
+
         }
     }
+    
+    
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

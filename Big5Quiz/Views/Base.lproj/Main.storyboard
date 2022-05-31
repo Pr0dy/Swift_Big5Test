@@ -3,7 +3,6 @@
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -243,15 +242,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kul-83-6I7">
-                                <rect key="frame" x="259" y="517" width="45" height="31"/>
-                                <color key="tintColor" systemColor="systemRedColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <imageReference key="image" image="questionmark.app.fill" catalog="system" symbolScale="large"/>
-                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
-                                </buttonConfiguration>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Yv-Lr-rz1"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
@@ -260,15 +250,11 @@
                             <constraint firstItem="0Yv-Lr-rz1" firstAttribute="bottom" secondItem="FH9-tz-61K" secondAttribute="bottom" constant="60" id="8Rf-Y2-vc8"/>
                             <constraint firstItem="uoK-R5-Hlo" firstAttribute="top" secondItem="0Yv-Lr-rz1" secondAttribute="top" constant="20" id="8gS-iX-72X"/>
                             <constraint firstItem="tCU-ZD-3yB" firstAttribute="top" secondItem="uoK-R5-Hlo" secondAttribute="bottom" constant="20" id="Bh7-Ig-uxM"/>
-                            <constraint firstItem="NFP-tL-y6W" firstAttribute="trailing" secondItem="Kul-83-6I7" secondAttribute="trailing" id="CyW-Gb-7Uo"/>
-                            <constraint firstItem="Kul-83-6I7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0Yv-Lr-rz1" secondAttribute="leading" symbolic="YES" id="D2g-IH-fXr"/>
                             <constraint firstItem="0Yv-Lr-rz1" firstAttribute="trailing" secondItem="tCU-ZD-3yB" secondAttribute="trailing" constant="3" id="Hkk-6P-E3C"/>
-                            <constraint firstItem="0Yv-Lr-rz1" firstAttribute="bottom" secondItem="Kul-83-6I7" secondAttribute="bottom" constant="20" id="IW4-eW-kVe"/>
                             <constraint firstItem="FH9-tz-61K" firstAttribute="top" secondItem="NFP-tL-y6W" secondAttribute="bottom" constant="30" id="JXq-Eq-u6t"/>
                             <constraint firstItem="0Yv-Lr-rz1" firstAttribute="trailing" secondItem="NFP-tL-y6W" secondAttribute="trailing" constant="16" id="N97-R2-QW1"/>
                             <constraint firstItem="uoK-R5-Hlo" firstAttribute="leading" secondItem="0Yv-Lr-rz1" secondAttribute="leading" constant="16" id="PhK-71-PQW"/>
                             <constraint firstItem="NFP-tL-y6W" firstAttribute="leading" secondItem="0Yv-Lr-rz1" secondAttribute="leading" constant="16" id="RCk-iU-6pX"/>
-                            <constraint firstItem="0Yv-Lr-rz1" firstAttribute="trailing" secondItem="Kul-83-6I7" secondAttribute="trailing" constant="16" id="Zyi-BP-rsp"/>
                             <constraint firstItem="0Yv-Lr-rz1" firstAttribute="trailing" secondItem="uoK-R5-Hlo" secondAttribute="trailing" constant="16" id="cl7-4T-GJP"/>
                             <constraint firstItem="0Yv-Lr-rz1" firstAttribute="trailing" secondItem="FH9-tz-61K" secondAttribute="trailing" constant="60" id="emY-3Z-EKi"/>
                             <constraint firstItem="FH9-tz-61K" firstAttribute="leading" secondItem="0Yv-Lr-rz1" secondAttribute="leading" constant="60" id="s7P-rR-9QO"/>
@@ -455,6 +441,7 @@
                     <size key="freeformSize" width="320" height="800"/>
                     <connections>
                         <outlet property="resultsTable" destination="0bz-z0-OlT" id="9wG-gE-JSL"/>
+                        <outlet property="saveButton" destination="gFm-Ab-8kt" id="Ux1-vx-iLi"/>
                         <segue destination="rZF-pG-YZZ" kind="presentation" identifier="backToMenu" modalPresentationStyle="fullScreen" id="FBq-9H-Cff"/>
                     </connections>
                 </viewController>
@@ -482,14 +469,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lIo-Ys-1xA"/>
+        <segue reference="ENG-X5-FxX"/>
         <segue reference="FBq-9H-Cff"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="brainIcon" width="190" height="134"/>
         <image name="mainScreen Title" width="130" height="27"/>
-        <image name="questionmark.app.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
