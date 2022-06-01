@@ -13,7 +13,7 @@ class QuizViewController: UIViewController {
     var testQuestions = [Question]()
     var testScores = QuizTestScores()
     var constants = AppConstants()
-    let oneTraitQuiz = false
+    var oneTraitQuiz = false
     var oneTraitQuizIndex: Int?
     var testType: String?
     var currentQuestion = 0

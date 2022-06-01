@@ -333,6 +333,9 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                     <color key="baseBackgroundColor" red="0.55686277149999996" green="0.1607843041" blue="0.14509806040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="pressedStartTestButton:" destination="1yc-KT-iQW" eventType="touchUpInside" id="mfm-au-CcZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3ke-g5-h3a"/>
@@ -357,8 +360,7 @@
                     <connections>
                         <outlet property="pickTestSize" destination="s1I-NZ-NuW" id="Uq9-fY-O7r"/>
                         <outlet property="pickTestTraits" destination="RdA-nm-Ebr" id="W8X-Yz-uL2"/>
-                        <outlet property="pressedStartTest" destination="rvz-KJ-150" id="Q4m-vh-GAR"/>
-                        <segue destination="g4V-ac-QB7" kind="show" id="9Yt-zY-xib"/>
+                        <segue destination="g4V-ac-QB7" kind="show" identifier="customTestToQuiz" id="9Yt-zY-xib"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gN0-DK-MqL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -561,7 +563,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lnL-8K-pMF"/>
+        <segue reference="ENG-X5-FxX"/>
         <segue reference="9Yt-zY-xib"/>
         <segue reference="tdb-jf-vGy"/>
     </inferredMetricsTieBreakers>

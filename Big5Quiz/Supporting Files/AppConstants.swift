@@ -7,6 +7,7 @@ struct AppConstants{
     let menuToResultPageSegue = "menuToResults"
     let menuToBIG5traitsScreenSegue = "menuToBIG5traitsScreen"
     let menuToCustomTestSegue = "menuToCustomTest"
+    let customTestToQuizSegue = "customTestToQuiz"
 
     let quickTest = "Quick Test"
     let customTest = "Custom Test"
