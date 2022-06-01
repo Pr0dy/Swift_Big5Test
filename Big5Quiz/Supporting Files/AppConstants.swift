@@ -14,6 +14,6 @@ struct AppConstants{
     let resultCellIdentifier = "traitCell"
     
     let cellHeight = 170
-    let numberOfQuickTestQuestions = 1
+    let numberOfQuickTestQuestions = 3
 }
 

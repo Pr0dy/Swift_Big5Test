@@ -316,8 +316,8 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total question counter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxJ-B1-nLV">
-                                <rect key="frame" x="25" y="497" width="270" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total questions selected: 90" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxJ-B1-nLV">
+                                <rect key="frame" x="25" y="487" width="270" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -351,13 +351,14 @@
                             <constraint firstItem="s1I-NZ-NuW" firstAttribute="centerX" secondItem="yJU-fa-L21" secondAttribute="centerX" id="gfI-6m-D7q"/>
                             <constraint firstItem="s1I-NZ-NuW" firstAttribute="top" secondItem="YTm-xd-go9" secondAttribute="bottom" constant="5" id="j9F-vk-rBD"/>
                             <constraint firstItem="YTm-xd-go9" firstAttribute="centerX" secondItem="yJU-fa-L21" secondAttribute="centerX" id="s5Q-N4-zol"/>
-                            <constraint firstItem="wxJ-B1-nLV" firstAttribute="top" secondItem="RdA-nm-Ebr" secondAttribute="bottom" constant="40" id="soV-vG-gHo"/>
+                            <constraint firstItem="wxJ-B1-nLV" firstAttribute="top" secondItem="RdA-nm-Ebr" secondAttribute="bottom" constant="30" id="soV-vG-gHo"/>
                             <constraint firstItem="rvz-KJ-150" firstAttribute="centerX" secondItem="yJU-fa-L21" secondAttribute="centerX" id="yLC-NK-Nb2"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="pickTestSize" destination="s1I-NZ-NuW" id="Uq9-fY-O7r"/>
                         <outlet property="pickTestTraits" destination="RdA-nm-Ebr" id="W8X-Yz-uL2"/>
+                        <outlet property="totalQuestionsLabel" destination="wxJ-B1-nLV" id="C1d-Tm-N7g"/>
                         <segue destination="g4V-ac-QB7" kind="presentation" identifier="customTestToQuiz" id="9Yt-zY-xib"/>
                     </connections>
                 </viewController>
