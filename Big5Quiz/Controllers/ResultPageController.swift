@@ -66,7 +66,7 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
-    
+  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if showBIG5Page == false && segue.identifier == constants.resultPageToMenuSegue{
             let nextVC = segue.destination as! MenuViewController

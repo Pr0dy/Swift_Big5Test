@@ -1,6 +1,6 @@
 import Foundation
 
-var numberOfQuestions: Int = 0
+var numberOfQuestions: Int = AppConstants().numberOfQuickTestQuestions
 
 class QuizTestScores{
     //var Extraversion = ExtraversionScore()

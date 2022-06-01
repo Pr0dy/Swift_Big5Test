@@ -360,7 +360,7 @@
                     <connections>
                         <outlet property="pickTestSize" destination="s1I-NZ-NuW" id="Uq9-fY-O7r"/>
                         <outlet property="pickTestTraits" destination="RdA-nm-Ebr" id="W8X-Yz-uL2"/>
-                        <segue destination="g4V-ac-QB7" kind="show" identifier="customTestToQuiz" id="9Yt-zY-xib"/>
+                        <segue destination="g4V-ac-QB7" kind="presentation" identifier="customTestToQuiz" id="9Yt-zY-xib"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gN0-DK-MqL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -536,7 +536,7 @@
                         <outlet property="resultsTable" destination="0bz-z0-OlT" id="9wG-gE-JSL"/>
                         <outlet property="saveButton" destination="gFm-Ab-8kt" id="Ux1-vx-iLi"/>
                         <outlet property="titleLabel" destination="4Lc-TN-eyd" id="P3i-th-c20"/>
-                        <segue destination="rZF-pG-YZZ" kind="presentation" identifier="backToMenu" modalPresentationStyle="fullScreen" id="tdb-jf-vGy"/>
+                        <segue destination="rZF-pG-YZZ" kind="presentation" identifier="backToMenu" modalPresentationStyle="fullScreen" id="ePe-lU-Zar"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCA-DD-pPK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -548,6 +548,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sLa-pb-dvE" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="5g5-FB-piF"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RvR-Ec-x9d">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -565,7 +566,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="ENG-X5-FxX"/>
         <segue reference="9Yt-zY-xib"/>
-        <segue reference="tdb-jf-vGy"/>
+        <segue reference="ePe-lU-Zar"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
