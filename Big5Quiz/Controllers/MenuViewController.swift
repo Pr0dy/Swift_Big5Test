@@ -15,6 +15,7 @@ class MenuViewController: UIViewController{
         if segue.identifier == constants.mainScreenToQuickQuestionSegue{
             let nextVC = segue.destination as! QuizViewController
             nextVC.testType = self.testType
+            numberOfQuestions = constants.numberOfQuickTestQuestions
         }
         else if segue.identifier == constants.menuToResultPageSegue{
             let nextVC = segue.destination as! ResultPageController

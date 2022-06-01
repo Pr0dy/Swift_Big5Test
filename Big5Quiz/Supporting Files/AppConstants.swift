@@ -11,6 +11,8 @@ struct AppConstants{
     let quickTest = "Quick Test"
     let customTest = "Custom Test"
     let resultCellIdentifier = "traitCell"
+    
     let cellHeight = 170
+    let numberOfQuickTestQuestions = 3
 }
 

@@ -1,6 +1,6 @@
 import Foundation
 
-let numberOfQuestions = 2
+var numberOfQuestions: Int = 0
 
 class QuizTestScores{
     //var Extraversion = ExtraversionScore()

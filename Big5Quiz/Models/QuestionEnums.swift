@@ -1,6 +1,7 @@
 import Foundation
 
 enum Trait: String{
+    case All = "All"
     case Extraversion = "Extraversion"
     case Agreeableness = "Agreeableness"
     case Conscientiousness = "Conscientiousness"
@@ -102,4 +103,12 @@ enum TestSizeDescription: String{
     case small = "Small"
     case normal = "Normal"
     case full = "Full"
+}
+
+enum TraitIndex: Int{
+    case Extraversion = 0
+    case Agreeableness = 1
+    case Conscientiousness = 2
+    case Neuroticism = 3
+    case Openess = 4
 }

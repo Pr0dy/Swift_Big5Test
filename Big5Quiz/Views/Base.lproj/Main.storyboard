@@ -18,16 +18,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brainIcon" translatesAutoresizingMaskIntoConstraints="NO" id="f8f-JZ-i8d">
-                                <rect key="frame" x="58" y="74" width="204" height="140"/>
+                                <rect key="frame" x="58" y="30" width="204" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="jyT-jg-Fbr"/>
                                 </constraints>
                             </imageView>
                             <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cQz-78-vWT">
-                                <rect key="frame" x="70" y="254" width="180" height="254"/>
+                                <rect key="frame" x="70" y="210" width="180" height="298"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxQ-xE-VXy">
-                                        <rect key="frame" x="0.0" y="0.0" width="180" height="57.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="68.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Quick Test!">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
@@ -38,7 +38,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDr-BP-DSt">
-                                        <rect key="frame" x="0.0" y="65.5" width="180" height="57.5"/>
+                                        <rect key="frame" x="0.0" y="76.5" width="180" height="68.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Custom Test">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
@@ -49,7 +49,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQt-gD-cHR">
-                                        <rect key="frame" x="0.0" y="131" width="180" height="57.5"/>
+                                        <rect key="frame" x="0.0" y="153" width="180" height="68.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="My Results">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
@@ -60,7 +60,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUI-r7-PZO">
-                                        <rect key="frame" x="0.0" y="196.5" width="180" height="57.5"/>
+                                        <rect key="frame" x="0.0" y="229.5" width="180" height="68.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="The BIG5 Traits">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
@@ -85,7 +85,7 @@
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainScreen Title" translatesAutoresizingMaskIntoConstraints="NO" id="VvF-R0-jQK">
-                                <rect key="frame" x="40" y="94" width="240" height="100"/>
+                                <rect key="frame" x="40" y="50" width="240" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="egz-jr-9VK"/>
                                 </constraints>
@@ -269,6 +269,7 @@
                             <constraint firstItem="tCU-ZD-3yB" firstAttribute="leading" secondItem="0Yv-Lr-rz1" secondAttribute="leading" constant="3" id="z0r-Sp-J4p"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9bv-XE-aFE"/>
                     <connections>
                         <outlet property="questionCounterLabel" destination="tCU-ZD-3yB" id="D64-Cg-Rlf"/>
                         <outlet property="questionSubtraitLabel" destination="0xA-uB-H2x" id="6QZ-oW-3Jm"/>
@@ -280,50 +281,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faV-Pi-Nt3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2049.375" y="55.985915492957744"/>
+            <point key="canvasLocation" x="1939" y="517"/>
         </scene>
         <!--Custom Test Page Controller-->
         <scene sceneID="Zrf-lR-SeT">
             <objects>
                 <viewController id="1yc-KT-iQW" customClass="CustomTestPageController" customModule="Big5__Personality_Traits_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yJU-fa-L21">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1I-NZ-NuW">
-                                <rect key="frame" x="55" y="145" width="210" height="160"/>
+                                <rect key="frame" x="55" y="101" width="210" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="160" id="Bbx-BQ-2Mm"/>
                                     <constraint firstAttribute="width" constant="210" id="URo-pW-iQL"/>
                                 </constraints>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RdA-nm-Ebr">
-                                <rect key="frame" x="35" y="341" width="250" height="160"/>
+                                <rect key="frame" x="35" y="297" width="250" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="jmN-XQ-VZJ"/>
                                     <constraint firstAttribute="height" constant="160" id="yuM-xV-BCZ"/>
                                 </constraints>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose the test size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTm-xd-go9">
-                                <rect key="frame" x="77.5" y="119" width="165" height="21"/>
+                                <rect key="frame" x="77.5" y="75" width="165" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose test type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bK9-Oh-LFk">
-                                <rect key="frame" x="90.5" y="315" width="139" height="21"/>
+                                <rect key="frame" x="90.5" y="271" width="139" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total question counter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxJ-B1-nLV">
-                                <rect key="frame" x="25" y="541" width="270" height="21"/>
+                                <rect key="frame" x="25" y="497" width="270" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvz-KJ-150">
-                                <rect key="frame" x="111" y="64" width="98.5" height="35"/>
+                                <rect key="frame" x="111" y="20" width="98.5" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="dlR-3j-xd6"/>
                                 </constraints>
@@ -357,11 +358,12 @@
                         <outlet property="pickTestSize" destination="s1I-NZ-NuW" id="Uq9-fY-O7r"/>
                         <outlet property="pickTestTraits" destination="RdA-nm-Ebr" id="W8X-Yz-uL2"/>
                         <outlet property="pressedStartTest" destination="rvz-KJ-150" id="Q4m-vh-GAR"/>
+                        <segue destination="g4V-ac-QB7" kind="show" id="9Yt-zY-xib"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gN0-DK-MqL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1508" y="911"/>
+            <point key="canvasLocation" x="1074" y="848"/>
         </scene>
         <!--Result Page Controller-->
         <scene sceneID="nJp-kN-1rf">
@@ -532,7 +534,7 @@
                         <outlet property="resultsTable" destination="0bz-z0-OlT" id="9wG-gE-JSL"/>
                         <outlet property="saveButton" destination="gFm-Ab-8kt" id="Ux1-vx-iLi"/>
                         <outlet property="titleLabel" destination="4Lc-TN-eyd" id="P3i-th-c20"/>
-                        <segue destination="sLa-pb-dvE" kind="presentation" identifier="backToMenu" modalPresentationStyle="fullScreen" id="FBq-9H-Cff"/>
+                        <segue destination="rZF-pG-YZZ" kind="presentation" identifier="backToMenu" modalPresentationStyle="fullScreen" id="tdb-jf-vGy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCA-DD-pPK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -555,11 +557,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJg-AB-pDB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76.875" y="55.985915492957744"/>
+            <point key="canvasLocation" x="248" y="56"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lIo-Ys-1xA"/>
+        <segue reference="lnL-8K-pMF"/>
+        <segue reference="9Yt-zY-xib"/>
+        <segue reference="tdb-jf-vGy"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>

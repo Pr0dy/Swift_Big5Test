@@ -13,7 +13,8 @@ class QuizViewController: UIViewController {
     var testQuestions = [Question]()
     var testScores = QuizTestScores()
     var constants = AppConstants()
-
+    let oneTraitQuiz = false
+    var oneTraitQuizIndex: Int?
     var testType: String?
     var currentQuestion = 0
     
@@ -24,11 +25,26 @@ class QuizViewController: UIViewController {
         displayQuestion(questionIndex: 0)
     }
     
+    func selectTrait(traitIndex: Int) -> [[Question]]{
+        switch traitIndex{
+        case 0: return questions.extraversionQuestions
+        case 1: return questions.extraversionQuestions
+        case 2: return questions.extraversionQuestions
+        case 3: return questions.extraversionQuestions
+        case 4: return questions.extraversionQuestions
+        default: return []
+        }
+    }
+    
     func prepareQuiz(){
+        if oneTraitQuiz == false{
         let questionsArr = [questions.agreeablenessQuestions,questions.conscientiounessQuestions,questions.neuroticismQuestions,questions.openessQuestions,questions.extraversionQuestions]
         
         for traitQuestions in questionsArr{
             prepareQuestions(questions: traitQuestions)
+        }
+        } else {
+            prepareQuestions(questions: selectTrait(traitIndex: oneTraitQuizIndex!))
         }
     }
     
