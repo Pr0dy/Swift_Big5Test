@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 class QuizViewController: UIViewController {
-
+    
     @IBOutlet weak var quizTypeLabel: UILabel!
     @IBOutlet weak var questionCounterLabel: UILabel!
     @IBOutlet weak var questionSubtraitLabel: UILabel!
@@ -112,7 +112,12 @@ class QuizViewController: UIViewController {
             let nextVC = segue.destination as! ResultPageController
             self.testScores.averageSubtraitScores()
             nextVC.testScores = self.testScores
-      }
+        }
+    }
+    
+    
+    @IBAction func pressedReturnButton(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
 
     
