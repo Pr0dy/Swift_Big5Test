@@ -25,9 +25,11 @@ class MenuViewController: UIViewController{
             let nextVC = segue.destination as! ResultPageController
             nextVC.showBIG5Page = true
         }
+        /*
         else if segue.identifier == constants.menuToCustomTestSegue{
-            let nextVC = segue.destination as! CustomTestViewController
+            let nextVC = segue.destination as! CustomTestPageController
         }
+         */
     }
     
     @IBAction func pressedQuickTest(_ sender: Any) {
@@ -49,9 +51,14 @@ class MenuViewController: UIViewController{
         }
         
     }
+    
     @IBAction func pressedBIG5Button(_ sender: UIButton) {
         self.testType = constants.quickTest
         performSegue(withIdentifier: constants.menuToBIG5traitsScreenSegue, sender: self)
         }
     
+    @IBAction func pressedCustomTestButton(_ sender: UIButton) {
+        self.testType = constants.quickTest
+        performSegue(withIdentifier: constants.menuToCustomTestSegue, sender: self)
+    }
 }

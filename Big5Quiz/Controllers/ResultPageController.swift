@@ -70,7 +70,7 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == constants.resultPageToMenuSegue{
+        if showBIG5Page == false && segue.identifier == constants.resultPageToMenuSegue{
             let nextVC = segue.destination as! MenuViewController
             if saveResults == true{
                 nextVC.previousTestResults = self.testScores

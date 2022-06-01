@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1yc-KT-iQW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sLa-pb-dvE">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -44,6 +44,9 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
                                             <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="pressedCustomTestButton:" destination="rZF-pG-YZZ" eventType="touchUpInside" id="4qn-x3-8ZZ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQt-gD-cHR">
                                         <rect key="frame" x="0.0" y="131" width="180" height="57.5"/>
@@ -108,12 +111,12 @@
                         <segue destination="g4V-ac-QB7" kind="presentation" identifier="mainScreenToQuickQuestionSegue" id="ggs-kv-aMO"/>
                         <segue destination="rux-JE-LLB" kind="presentation" identifier="menuToResults" id="lIo-Ys-1xA"/>
                         <segue destination="rux-JE-LLB" kind="presentation" identifier="menuToBIG5traitsScreen" id="lnL-8K-pMF"/>
-                        <segue destination="1yc-KT-iQW" kind="show" identifier="menuToCustomTestSegue" id="y9N-0s-NJc"/>
+                        <segue destination="1yc-KT-iQW" kind="push" identifier="menuToCustomTest" id="y9N-0s-NJc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LDi-6r-DM2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="77" y="56"/>
+            <point key="canvasLocation" x="1074.375" y="55.985915492957744"/>
         </scene>
         <!--Quiz View Controller-->
         <scene sceneID="5HC-Dw-cOc">
@@ -277,12 +280,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faV-Pi-Nt3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1052" y="56"/>
+            <point key="canvasLocation" x="2049.375" y="55.985915492957744"/>
         </scene>
-        <!--View Controller-->
+        <!--Custom Test Page Controller-->
         <scene sceneID="Zrf-lR-SeT">
             <objects>
-                <viewController id="1yc-KT-iQW" sceneMemberID="viewController">
+                <viewController id="1yc-KT-iQW" customClass="CustomTestPageController" customModule="Big5__Personality_Traits_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yJU-fa-L21">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -320,10 +323,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvz-KJ-150">
-                                <rect key="frame" x="110" y="44" width="100" height="35"/>
+                                <rect key="frame" x="111" y="44" width="98.5" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="dlR-3j-xd6"/>
-                                    <constraint firstAttribute="width" constant="100" id="zhb-0G-ml3"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Start test!">
@@ -347,7 +349,6 @@
                             <constraint firstItem="s1I-NZ-NuW" firstAttribute="top" secondItem="YTm-xd-go9" secondAttribute="bottom" constant="5" id="j9F-vk-rBD"/>
                             <constraint firstItem="YTm-xd-go9" firstAttribute="centerX" secondItem="yJU-fa-L21" secondAttribute="centerX" id="s5Q-N4-zol"/>
                             <constraint firstItem="wxJ-B1-nLV" firstAttribute="top" secondItem="RdA-nm-Ebr" secondAttribute="bottom" constant="5" id="soV-vG-gHo"/>
-                            <constraint firstItem="wxJ-B1-nLV" firstAttribute="centerX" secondItem="yJU-fa-L21" secondAttribute="centerX" id="uGz-M3-ld7"/>
                             <constraint firstItem="rvz-KJ-150" firstAttribute="centerX" secondItem="yJU-fa-L21" secondAttribute="centerX" id="yLC-NK-Nb2"/>
                         </constraints>
                     </view>
@@ -526,35 +527,34 @@
                         <outlet property="resultsTable" destination="0bz-z0-OlT" id="9wG-gE-JSL"/>
                         <outlet property="saveButton" destination="gFm-Ab-8kt" id="Ux1-vx-iLi"/>
                         <outlet property="titleLabel" destination="4Lc-TN-eyd" id="P3i-th-c20"/>
-                        <segue destination="rZF-pG-YZZ" kind="presentation" identifier="backToMenu" modalPresentationStyle="fullScreen" id="FBq-9H-Cff"/>
+                        <segue destination="sLa-pb-dvE" kind="presentation" identifier="backToMenu" modalPresentationStyle="fullScreen" id="FBq-9H-Cff"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCA-DD-pPK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2156" y="85"/>
+            <point key="canvasLocation" x="3151.875" y="84.507042253521121"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="3NT-56-PLq">
+        <scene sceneID="AkN-hM-g1i">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZiV-CX-tHD" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sLa-pb-dvE" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rlx-ua-BKI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RvR-Ec-x9d">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="rZF-pG-YZZ" kind="relationship" relationship="rootViewController" id="3xk-yE-DH9"/>
+                        <segue destination="rZF-pG-YZZ" kind="relationship" relationship="rootViewController" id="0Dv-Yq-gbt"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3ET-LH-Syd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RJg-AB-pDB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-829.23076923076917" y="84.597156398104261"/>
+            <point key="canvasLocation" x="76.875" y="55.985915492957744"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ENG-X5-FxX"/>
-        <segue reference="3xk-yE-DH9"/>
+        <segue reference="lIo-Ys-1xA"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
