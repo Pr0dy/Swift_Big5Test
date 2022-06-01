@@ -89,3 +89,17 @@ enum SubTraitDescription: String{
     case Intellect = "Your desire to play with ideas, philosophycal concepts and have deep discussions about meaning and life"
     case Liberalism = "Your political liberalism, desire for progressive change in society, lower levels of liberalism indicate you might have a conservative preference"
 }
+
+enum TestSize: Int{
+    case quick = 3
+    case small = 5
+    case normal = 7
+    case full = 10
+}
+
+enum TestSizeDescription: String{
+    case quick = "Quick"
+    case small = "Small"
+    case normal = "Normal"
+    case full = "Full"
+}

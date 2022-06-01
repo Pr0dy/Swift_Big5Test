@@ -291,39 +291,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1I-NZ-NuW">
-                                <rect key="frame" x="55" y="125" width="210" height="160"/>
+                                <rect key="frame" x="55" y="145" width="210" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="160" id="Bbx-BQ-2Mm"/>
                                     <constraint firstAttribute="width" constant="210" id="URo-pW-iQL"/>
                                 </constraints>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RdA-nm-Ebr">
-                                <rect key="frame" x="55" y="321" width="210" height="160"/>
+                                <rect key="frame" x="35" y="341" width="250" height="160"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="210" id="jmN-XQ-VZJ"/>
+                                    <constraint firstAttribute="width" constant="250" id="jmN-XQ-VZJ"/>
                                     <constraint firstAttribute="height" constant="160" id="yuM-xV-BCZ"/>
                                 </constraints>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose the test size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTm-xd-go9">
-                                <rect key="frame" x="77.5" y="99" width="165" height="21"/>
+                                <rect key="frame" x="77.5" y="119" width="165" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose test type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bK9-Oh-LFk">
-                                <rect key="frame" x="90.5" y="295" width="139" height="21"/>
+                                <rect key="frame" x="90.5" y="315" width="139" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total question counter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxJ-B1-nLV">
-                                <rect key="frame" x="25" y="486" width="270" height="21"/>
+                                <rect key="frame" x="25" y="541" width="270" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvz-KJ-150">
-                                <rect key="frame" x="111" y="44" width="98.5" height="35"/>
+                                <rect key="frame" x="111" y="64" width="98.5" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="dlR-3j-xd6"/>
                                 </constraints>
@@ -342,21 +342,26 @@
                             <constraint firstItem="wxJ-B1-nLV" firstAttribute="leading" secondItem="3ke-g5-h3a" secondAttribute="leading" constant="25" id="F40-Ss-oM9"/>
                             <constraint firstItem="RdA-nm-Ebr" firstAttribute="top" secondItem="bK9-Oh-LFk" secondAttribute="bottom" constant="5" id="JPT-QV-CgE"/>
                             <constraint firstItem="bK9-Oh-LFk" firstAttribute="top" secondItem="s1I-NZ-NuW" secondAttribute="bottom" constant="10" id="NTY-ha-EfL"/>
-                            <constraint firstItem="rvz-KJ-150" firstAttribute="top" secondItem="3ke-g5-h3a" secondAttribute="top" id="Nbl-5Z-6Y7"/>
+                            <constraint firstItem="rvz-KJ-150" firstAttribute="top" secondItem="3ke-g5-h3a" secondAttribute="top" constant="20" id="Nbl-5Z-6Y7"/>
                             <constraint firstItem="YTm-xd-go9" firstAttribute="top" secondItem="rvz-KJ-150" secondAttribute="bottom" constant="20" id="Nmt-wj-Amr"/>
                             <constraint firstItem="RdA-nm-Ebr" firstAttribute="centerX" secondItem="yJU-fa-L21" secondAttribute="centerX" id="cql-Ya-Daa"/>
                             <constraint firstItem="s1I-NZ-NuW" firstAttribute="centerX" secondItem="yJU-fa-L21" secondAttribute="centerX" id="gfI-6m-D7q"/>
                             <constraint firstItem="s1I-NZ-NuW" firstAttribute="top" secondItem="YTm-xd-go9" secondAttribute="bottom" constant="5" id="j9F-vk-rBD"/>
                             <constraint firstItem="YTm-xd-go9" firstAttribute="centerX" secondItem="yJU-fa-L21" secondAttribute="centerX" id="s5Q-N4-zol"/>
-                            <constraint firstItem="wxJ-B1-nLV" firstAttribute="top" secondItem="RdA-nm-Ebr" secondAttribute="bottom" constant="5" id="soV-vG-gHo"/>
+                            <constraint firstItem="wxJ-B1-nLV" firstAttribute="top" secondItem="RdA-nm-Ebr" secondAttribute="bottom" constant="40" id="soV-vG-gHo"/>
                             <constraint firstItem="rvz-KJ-150" firstAttribute="centerX" secondItem="yJU-fa-L21" secondAttribute="centerX" id="yLC-NK-Nb2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rD7-9z-HXe"/>
+                    <connections>
+                        <outlet property="pickTestSize" destination="s1I-NZ-NuW" id="Uq9-fY-O7r"/>
+                        <outlet property="pickTestTraits" destination="RdA-nm-Ebr" id="W8X-Yz-uL2"/>
+                        <outlet property="pressedStartTest" destination="rvz-KJ-150" id="Q4m-vh-GAR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gN0-DK-MqL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="939" y="848"/>
+            <point key="canvasLocation" x="1508" y="911"/>
         </scene>
         <!--Result Page Controller-->
         <scene sceneID="nJp-kN-1rf">

@@ -8,8 +8,8 @@ struct AppConstants{
     let menuToBIG5traitsScreenSegue = "menuToBIG5traitsScreen"
     let menuToCustomTestSegue = "menuToCustomTest"
 
-    
     let quickTest = "Quick Test"
+    let customTest = "Custom Test"
     let resultCellIdentifier = "traitCell"
     let cellHeight = 170
 }
