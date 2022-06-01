@@ -50,11 +50,9 @@ class QuizViewController: UIViewController {
     
     func prepareQuestions(questions: [[Question]]){
         var count = 0
-        var v: Subtrait?
         
         for subtraitQuestionsArr in questions {
             for question in subtraitQuestionsArr {
-                v = question.questionSubTrait
                 if count < numberOfQuestions{
                 testQuestions.append(question)
                 count += 1
@@ -114,7 +112,8 @@ class QuizViewController: UIViewController {
             let nextVC = segue.destination as! ResultPageController
             self.testScores.averageSubtraitScores()
             nextVC.testScores = self.testScores
-            nextVC.oneTraitQuiz = self.allTraitsQuiz
+            nextVC.allTraitsQuiz = self.allTraitsQuiz
+            nextVC.oneTraitQuizIndex = self.oneTraitQuizIndex  
         }
     }
     

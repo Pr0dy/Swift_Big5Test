@@ -9,8 +9,9 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
     let constants = AppConstants()
     var resultData: [TraitData]?
     var testScores: QuizTestScores?
+    var oneTraitQuizIndex: Int?
     let cellColors = ResultCellColors()
-    var oneTraitQuiz: Bool?
+    var allTraitsQuiz = true
     var saveResults = false
     var showBIG5Page = false
     
@@ -123,12 +124,16 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
             dequeuedCell.traitName.text = resultData![indexPath.section].title
             
             if showBIG5Page == false{
-            dequeuedCell.traitScore.text = traitScoreLabel(score: resultData![indexPath.section].value)
-            } else if oneTraitQuiz == true {
-                dequeuedCell.traitScore.text = "Not tested :("
+                if allTraitsQuiz == true || indexPath.section == oneTraitQuizIndex{
+                       dequeuedCell.traitScore.text = traitScoreLabel(score: resultData![indexPath.section].value)
+                } else {
+                    dequeuedCell.traitScore.text = "Not tested :("
+                }
+                    
             } else {
                 dequeuedCell.traitScore.isHidden = true
-            }
+             }
+        
                 
             dequeuedCell.traitDescription.text =  resultData![indexPath.section].description
             cellColour(cell: dequeuedCell, trait: resultData![indexPath.section].title)
@@ -140,12 +145,18 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
             
             dequeuedCell.downImage.image = nil
             dequeuedCell.traitName.text = resultData![indexPath.section].data[indexPath.row-1].title
-            if showBIG5Page == false{
-            dequeuedCell.traitScore.text = traitScoreLabel(score: resultData![indexPath.section].data[indexPath.row-1].value)
-        } else {
-            dequeuedCell.traitScore.isHidden = true
-        }
             
+            if showBIG5Page == false{
+                if allTraitsQuiz == true || indexPath.section == oneTraitQuizIndex{
+                    dequeuedCell.traitScore.text = traitScoreLabel(score: resultData![indexPath.section].data[indexPath.row-1].value)
+                } else {
+                
+                    dequeuedCell.traitScore.text = "Not tested :("
+                }
+                    
+            } else {
+                dequeuedCell.traitScore.isHidden = true
+             }
             
             dequeuedCell.traitDescription.text =  resultData![indexPath.section].data[indexPath.row-1].description
             cellColour(cell: dequeuedCell, trait: resultData![indexPath.section].title)
