@@ -37,7 +37,7 @@ class QuizViewController: UIViewController {
     }
     
     func prepareQuiz(){
-        if oneTraitQuiz == false{
+        if oneTraitQuiz == false || oneTraitQuizIndex == -1{
         let questionsArr = [questions.agreeablenessQuestions,questions.conscientiounessQuestions,questions.neuroticismQuestions,questions.openessQuestions,questions.extraversionQuestions]
         
         for traitQuestions in questionsArr{

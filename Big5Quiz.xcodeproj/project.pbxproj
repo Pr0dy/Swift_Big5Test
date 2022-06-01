@@ -97,8 +97,8 @@
 		D2762CE52818569300A247CE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D2D3F5ED2847B83900AE61C5 /* CustomTestPageController.swift */,
 				D2D4C16F281A97B60098C257 /* MenuViewController.swift */,
+				D2D3F5ED2847B83900AE61C5 /* CustomTestPageController.swift */,
 				D2F622A9281478550092D58C /* QuizViewController.swift */,
 				D2586D89282BD63800714AD0 /* ResultPageController.swift */,
 			);

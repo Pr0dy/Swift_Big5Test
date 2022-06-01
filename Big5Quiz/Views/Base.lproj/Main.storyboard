@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sLa-pb-dvE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rZF-pG-YZZ">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -111,7 +111,7 @@
                         <segue destination="g4V-ac-QB7" kind="presentation" identifier="mainScreenToQuickQuestionSegue" id="ggs-kv-aMO"/>
                         <segue destination="rux-JE-LLB" kind="presentation" identifier="menuToResults" id="lIo-Ys-1xA"/>
                         <segue destination="rux-JE-LLB" kind="presentation" identifier="menuToBIG5traitsScreen" id="lnL-8K-pMF"/>
-                        <segue destination="1yc-KT-iQW" kind="push" identifier="menuToCustomTest" id="y9N-0s-NJc"/>
+                        <segue destination="1yc-KT-iQW" kind="presentation" identifier="menuToCustomTest" modalPresentationStyle="fullScreen" id="y9N-0s-NJc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LDi-6r-DM2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -269,7 +269,6 @@
                             <constraint firstItem="tCU-ZD-3yB" firstAttribute="leading" secondItem="0Yv-Lr-rz1" secondAttribute="leading" constant="3" id="z0r-Sp-J4p"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="9bv-XE-aFE"/>
                     <connections>
                         <outlet property="questionCounterLabel" destination="tCU-ZD-3yB" id="D64-Cg-Rlf"/>
                         <outlet property="questionSubtraitLabel" destination="0xA-uB-H2x" id="6QZ-oW-3Jm"/>
@@ -281,14 +280,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faV-Pi-Nt3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1939" y="517"/>
+            <point key="canvasLocation" x="2123" y="605"/>
         </scene>
         <!--Custom Test Page Controller-->
         <scene sceneID="Zrf-lR-SeT">
             <objects>
                 <viewController id="1yc-KT-iQW" customClass="CustomTestPageController" customModule="Big5__Personality_Traits_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yJU-fa-L21">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1I-NZ-NuW">
@@ -356,7 +355,6 @@
                             <constraint firstItem="rvz-KJ-150" firstAttribute="centerX" secondItem="yJU-fa-L21" secondAttribute="centerX" id="yLC-NK-Nb2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="rD7-9z-HXe"/>
                     <connections>
                         <outlet property="pickTestSize" destination="s1I-NZ-NuW" id="Uq9-fY-O7r"/>
                         <outlet property="pickTestTraits" destination="RdA-nm-Ebr" id="W8X-Yz-uL2"/>
@@ -543,30 +541,10 @@
             </objects>
             <point key="canvasLocation" x="3151.875" y="84.507042253521121"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="AkN-hM-g1i">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sLa-pb-dvE" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="5g5-FB-piF"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RvR-Ec-x9d">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="rZF-pG-YZZ" kind="relationship" relationship="rootViewController" id="0Dv-Yq-gbt"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RJg-AB-pDB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="248" y="56"/>
-        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="ENG-X5-FxX"/>
         <segue reference="9Yt-zY-xib"/>
-        <segue reference="ePe-lU-Zar"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
