@@ -18,16 +18,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brainIcon" translatesAutoresizingMaskIntoConstraints="NO" id="f8f-JZ-i8d">
-                                <rect key="frame" x="58" y="30" width="204" height="140"/>
+                                <rect key="frame" x="58" y="74" width="204" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="jyT-jg-Fbr"/>
                                 </constraints>
                             </imageView>
                             <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cQz-78-vWT">
-                                <rect key="frame" x="70" y="210" width="180" height="298"/>
+                                <rect key="frame" x="70" y="254" width="180" height="254"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxQ-xE-VXy">
-                                        <rect key="frame" x="0.0" y="0.0" width="180" height="68.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="57.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Quick Test!">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
@@ -38,7 +38,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDr-BP-DSt">
-                                        <rect key="frame" x="0.0" y="76.5" width="180" height="68.5"/>
+                                        <rect key="frame" x="0.0" y="65.5" width="180" height="57.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Custom Test">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
@@ -46,7 +46,7 @@
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQt-gD-cHR">
-                                        <rect key="frame" x="0.0" y="153" width="180" height="68.5"/>
+                                        <rect key="frame" x="0.0" y="131" width="180" height="57.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="My Results">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
@@ -57,7 +57,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUI-r7-PZO">
-                                        <rect key="frame" x="0.0" y="229.5" width="180" height="68.5"/>
+                                        <rect key="frame" x="0.0" y="196.5" width="180" height="57.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="The BIG5 Traits">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
@@ -82,7 +82,7 @@
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainScreen Title" translatesAutoresizingMaskIntoConstraints="NO" id="VvF-R0-jQK">
-                                <rect key="frame" x="40" y="50" width="240" height="100"/>
+                                <rect key="frame" x="40" y="94" width="240" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="egz-jr-9VK"/>
                                 </constraints>

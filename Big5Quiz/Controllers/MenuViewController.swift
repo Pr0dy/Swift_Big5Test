@@ -25,6 +25,9 @@ class MenuViewController: UIViewController{
             let nextVC = segue.destination as! ResultPageController
             nextVC.showBIG5Page = true
         }
+        else if segue.identifier == constants.menuToCustomTestSegue{
+            let nextVC = segue.destination as! CustomTestViewController
+        }
     }
     
     @IBAction func pressedQuickTest(_ sender: Any) {
@@ -44,6 +47,7 @@ class MenuViewController: UIViewController{
             
             present(alert,animated: true)
         }
+        
     }
     @IBAction func pressedBIG5Button(_ sender: UIButton) {
         self.testType = constants.quickTest
