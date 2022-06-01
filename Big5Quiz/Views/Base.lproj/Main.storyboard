@@ -251,17 +251,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiM-Qm-olL">
-                                <rect key="frame" x="231.5" y="523" width="73.5" height="35"/>
+                                <rect key="frame" x="250" y="523" width="55" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="1Bl-gH-XlA"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Return">
+                                <buttonConfiguration key="configuration" style="filled" title="Quit">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                     <color key="baseBackgroundColor" red="0.55686277149999996" green="0.1607843041" blue="0.14509806040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="pressedReturnButton:" destination="g4V-ac-QB7" eventType="touchUpInside" id="cIM-6h-8h5"/>
+                                    <action selector="pressedQuitButton:" destination="g4V-ac-QB7" eventType="touchUpInside" id="rqp-uo-jQV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -308,39 +308,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1I-NZ-NuW">
-                                <rect key="frame" x="55" y="75.5" width="210" height="160"/>
+                                <rect key="frame" x="55" y="84.5" width="210" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="160" id="Bbx-BQ-2Mm"/>
                                     <constraint firstAttribute="width" constant="210" id="URo-pW-iQL"/>
                                 </constraints>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RdA-nm-Ebr">
-                                <rect key="frame" x="35" y="271" width="250" height="160"/>
+                                <rect key="frame" x="35" y="287.5" width="250" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="jmN-XQ-VZJ"/>
                                     <constraint firstAttribute="height" constant="160" id="yuM-xV-BCZ"/>
                                 </constraints>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose the test size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTm-xd-go9">
-                                <rect key="frame" x="77.5" y="50" width="165" height="20.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose the test size" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTm-xd-go9">
+                                <rect key="frame" x="68.5" y="61.5" width="183.5" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose test type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bK9-Oh-LFk">
-                                <rect key="frame" x="91" y="245.5" width="138.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose test type" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bK9-Oh-LFk">
+                                <rect key="frame" x="83" y="264.5" width="154" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total questions selected: 90" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxJ-B1-nLV">
-                                <rect key="frame" x="25" y="446" width="270" height="20.5"/>
+                                <rect key="frame" x="25" y="477.5" width="270" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="TFm-VR-OUa">
-                                <rect key="frame" x="35" y="496.5" width="249" height="35"/>
+                                <rect key="frame" x="35" y="503" width="249" height="35"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvz-KJ-150">
                                         <rect key="frame" x="0.0" y="0.0" width="98.5" height="35"/>
@@ -372,6 +372,12 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customize your test!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOQ-FL-Yly">
+                                <rect key="frame" x="71" y="20" width="178.5" height="21.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3ke-g5-h3a"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
@@ -380,16 +386,18 @@
                             <constraint firstItem="3ke-g5-h3a" firstAttribute="trailing" secondItem="TFm-VR-OUa" secondAttribute="trailing" constant="36" id="3Od-O9-RZ4"/>
                             <constraint firstItem="bK9-Oh-LFk" firstAttribute="centerX" secondItem="yJU-fa-L21" secondAttribute="centerX" id="A6C-Aa-m6k"/>
                             <constraint firstItem="wxJ-B1-nLV" firstAttribute="leading" secondItem="3ke-g5-h3a" secondAttribute="leading" constant="25" id="F40-Ss-oM9"/>
-                            <constraint firstItem="RdA-nm-Ebr" firstAttribute="top" secondItem="bK9-Oh-LFk" secondAttribute="bottom" constant="5" id="JPT-QV-CgE"/>
-                            <constraint firstItem="TFm-VR-OUa" firstAttribute="top" secondItem="wxJ-B1-nLV" secondAttribute="bottom" constant="30" id="Jmq-sv-gWC"/>
-                            <constraint firstItem="bK9-Oh-LFk" firstAttribute="top" secondItem="s1I-NZ-NuW" secondAttribute="bottom" constant="10" id="NTY-ha-EfL"/>
+                            <constraint firstItem="3ke-g5-h3a" firstAttribute="bottom" secondItem="TFm-VR-OUa" secondAttribute="bottom" constant="30" id="I14-A3-RNc"/>
+                            <constraint firstItem="RdA-nm-Ebr" firstAttribute="top" secondItem="bK9-Oh-LFk" secondAttribute="bottom" id="JPT-QV-CgE"/>
+                            <constraint firstItem="bK9-Oh-LFk" firstAttribute="top" secondItem="s1I-NZ-NuW" secondAttribute="bottom" constant="20" id="NTY-ha-EfL"/>
                             <constraint firstItem="TFm-VR-OUa" firstAttribute="leading" secondItem="3ke-g5-h3a" secondAttribute="leading" constant="35" id="Ypn-sY-qVP"/>
-                            <constraint firstItem="YTm-xd-go9" firstAttribute="top" secondItem="3ke-g5-h3a" secondAttribute="top" constant="50" id="ajj-JF-4qJ"/>
                             <constraint firstItem="RdA-nm-Ebr" firstAttribute="centerX" secondItem="yJU-fa-L21" secondAttribute="centerX" id="cql-Ya-Daa"/>
                             <constraint firstItem="s1I-NZ-NuW" firstAttribute="centerX" secondItem="yJU-fa-L21" secondAttribute="centerX" id="gfI-6m-D7q"/>
-                            <constraint firstItem="s1I-NZ-NuW" firstAttribute="top" secondItem="YTm-xd-go9" secondAttribute="bottom" constant="5" id="j9F-vk-rBD"/>
+                            <constraint firstItem="s1I-NZ-NuW" firstAttribute="top" secondItem="YTm-xd-go9" secondAttribute="bottom" id="j9F-vk-rBD"/>
+                            <constraint firstItem="TOQ-FL-Yly" firstAttribute="centerX" secondItem="yJU-fa-L21" secondAttribute="centerX" id="mAB-yo-D2b"/>
+                            <constraint firstItem="YTm-xd-go9" firstAttribute="top" secondItem="TOQ-FL-Yly" secondAttribute="bottom" constant="20" id="o1x-zi-ZEm"/>
+                            <constraint firstItem="TOQ-FL-Yly" firstAttribute="top" secondItem="3ke-g5-h3a" secondAttribute="top" constant="20" id="r3d-SQ-hPI"/>
                             <constraint firstItem="YTm-xd-go9" firstAttribute="centerX" secondItem="yJU-fa-L21" secondAttribute="centerX" id="s5Q-N4-zol"/>
-                            <constraint firstItem="wxJ-B1-nLV" firstAttribute="top" secondItem="RdA-nm-Ebr" secondAttribute="bottom" constant="15" id="soV-vG-gHo"/>
+                            <constraint firstItem="wxJ-B1-nLV" firstAttribute="top" secondItem="RdA-nm-Ebr" secondAttribute="bottom" constant="30" id="soV-vG-gHo"/>
                         </constraints>
                     </view>
                     <connections>
@@ -581,8 +589,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lnL-8K-pMF"/>
-        <segue reference="ggs-kv-aMO"/>
+        <segue reference="ENG-X5-FxX"/>
+        <segue reference="9Yt-zY-xib"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>

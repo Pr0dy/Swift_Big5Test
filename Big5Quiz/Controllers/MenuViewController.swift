@@ -26,11 +26,6 @@ class MenuViewController: UIViewController{
             let nextVC = segue.destination as! ResultPageController
             nextVC.showBIG5Page = true
         }
-        /*
-        else if segue.identifier == constants.menuToCustomTestSegue{
-            let nextVC = segue.destination as! CustomTestPageController
-        }
-         */
     }
     
     @IBAction func pressedQuickTest(_ sender: Any) {

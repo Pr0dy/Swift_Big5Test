@@ -10,6 +10,7 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
     var resultData: [TraitData]?
     var testScores: QuizTestScores?
     let cellColors = ResultCellColors()
+    var oneTraitQuiz: Bool?
     var saveResults = false
     var showBIG5Page = false
     
@@ -118,15 +119,16 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
             dequeuedCell.selectionStyle = .none
 
             dequeuedCell.downImage.image = UIImage(systemName: "arrow.down.app.fill")
-                        
+            
             dequeuedCell.traitName.text = resultData![indexPath.section].title
             
             if showBIG5Page == false{
             dequeuedCell.traitScore.text = traitScoreLabel(score: resultData![indexPath.section].value)
+            } else if oneTraitQuiz == true {
+                dequeuedCell.traitScore.text = "Not tested :("
             } else {
                 dequeuedCell.traitScore.isHidden = true
             }
-                
                 
             dequeuedCell.traitDescription.text =  resultData![indexPath.section].description
             cellColour(cell: dequeuedCell, trait: resultData![indexPath.section].title)

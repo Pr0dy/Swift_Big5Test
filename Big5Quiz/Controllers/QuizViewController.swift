@@ -13,7 +13,7 @@ class QuizViewController: UIViewController {
     var testQuestions = [Question]()
     var testScores = QuizTestScores()
     var constants = AppConstants()
-    var oneTraitQuiz = false
+    var allTraitsQuiz = true
     var oneTraitQuizIndex: Int?
     var testType: String?
     var currentQuestion = 0
@@ -28,16 +28,16 @@ class QuizViewController: UIViewController {
     func selectTrait(traitIndex: Int) -> [[Question]]{
         switch traitIndex{
         case 0: return questions.extraversionQuestions
-        case 1: return questions.extraversionQuestions
-        case 2: return questions.extraversionQuestions
-        case 3: return questions.extraversionQuestions
-        case 4: return questions.extraversionQuestions
+        case 1: return questions.agreeablenessQuestions
+        case 2: return questions.conscientiounessQuestions
+        case 3: return questions.neuroticismQuestions
+        case 4: return questions.openessQuestions
         default: return []
         }
     }
     
     func prepareQuiz(){
-        if oneTraitQuiz == false || oneTraitQuizIndex == -1{
+        if allTraitsQuiz == true{
         let questionsArr = [questions.agreeablenessQuestions,questions.conscientiounessQuestions,questions.neuroticismQuestions,questions.openessQuestions,questions.extraversionQuestions]
         
         for traitQuestions in questionsArr{
@@ -50,17 +50,19 @@ class QuizViewController: UIViewController {
     
     func prepareQuestions(questions: [[Question]]){
         var count = 0
+        var v: Subtrait?
         
         for subtraitQuestionsArr in questions {
             for question in subtraitQuestionsArr {
+                v = question.questionSubTrait
                 if count < numberOfQuestions{
                 testQuestions.append(question)
                 count += 1
                 } else {
-                    count = 0
                     break
                 }
             }
+            count = 0
         }
     }
  
@@ -112,11 +114,12 @@ class QuizViewController: UIViewController {
             let nextVC = segue.destination as! ResultPageController
             self.testScores.averageSubtraitScores()
             nextVC.testScores = self.testScores
+            nextVC.oneTraitQuiz = self.allTraitsQuiz
         }
     }
     
     
-    @IBAction func pressedReturnButton(_ sender: UIButton) {
+    @IBAction func pressedQuitButton(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
 
