@@ -507,10 +507,10 @@
                                                             </constraints>
                                                         </tableViewCellContentView>
                                                         <connections>
-                                                            <outlet property="downImage" destination="B3F-Ra-13g" id="cNq-YU-54o"/>
-                                                            <outlet property="traitDescription" destination="Ble-e1-DA4" id="CIW-un-8xK"/>
-                                                            <outlet property="traitName" destination="wTW-Pj-9wk" id="0Fs-7s-yps"/>
-                                                            <outlet property="traitScore" destination="g6f-XS-1j7" id="KeG-o4-eRU"/>
+                                                            <outlet property="downImage" destination="B3F-Ra-13g" id="5gO-hD-rm7"/>
+                                                            <outlet property="traitDescription" destination="Ble-e1-DA4" id="Vgq-wS-ltu"/>
+                                                            <outlet property="traitName" destination="wTW-Pj-9wk" id="Xfl-Oh-rrL"/>
+                                                            <outlet property="traitScore" destination="g6f-XS-1j7" id="vA4-hr-T58"/>
                                                         </connections>
                                                     </tableViewCell>
                                                 </prototypes>
