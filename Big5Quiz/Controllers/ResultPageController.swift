@@ -141,7 +141,7 @@ class ResultPageController: UIViewController{
                     dequeuedCell.traitScore.text = traitScoreLabel(score: resultData![indexPath.section].data[indexPath.row-1].value)
                 } else {
                 
-                    dequeuedCell.traitScore.text = "Not tested :("
+                    dequeuedCell.traitScore.text = constants.notTestedMessage
                 }
                     
             } else {
@@ -191,11 +191,11 @@ class ResultPageController: UIViewController{
     
     func cellColour(cell: CustomCell, trait: String){
         switch trait{
-        case "Agreeableness": cell.backgroundColor = cellColors.agreeablenessColor;  break;
-        case "Extraversion": cell.backgroundColor = cellColors.extraversionColor;  break;
-        case "Conscientiousness": cell.backgroundColor = cellColors.conscientiounessColor;  break;
-        case "Openess": cell.backgroundColor = cellColors.openenessColor;  break;
-        case "Neuroticism": cell.backgroundColor = cellColors.neuroticismColor;  break;
+        case Trait.Extraversion.rawValue: cell.backgroundColor = cellColors.extraversionColor;  break;
+        case Trait.Agreeableness.rawValue: cell.backgroundColor = cellColors.agreeablenessColor;  break;
+        case Trait.Conscientiousness.rawValue: cell.backgroundColor = cellColors.conscientiounessColor;  break;
+        case Trait.Openess.rawValue: cell.backgroundColor = cellColors.openenessColor;  break;
+        case Trait.Neuroticism.rawValue: cell.backgroundColor = cellColors.neuroticismColor;  break;
         default: break;
         }
     }

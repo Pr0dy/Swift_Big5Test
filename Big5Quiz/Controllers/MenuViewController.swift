@@ -23,9 +23,9 @@ class MenuViewController: UIViewController{
         self.testType = constants.quickTest
         performSegue(withIdentifier: constants.menuToResultPageSegue, sender: self)
         } else {
-            let alert = UIAlertController(title: "No results saved :(", message: "Make a test then save the results!", preferredStyle: .alert)
+            let alert = UIAlertController(title: constants.noResultSaved, message: constants.noResultMessage, preferredStyle: .alert)
             
-            alert.addAction(UIAlertAction(title: "Back", style: .cancel, handler: { action in
+            alert.addAction(UIAlertAction(title: constants.alertActionTitle, style: .cancel, handler: { action in
             }))
             
             present(alert,animated: true)

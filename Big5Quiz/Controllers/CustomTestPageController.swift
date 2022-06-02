@@ -11,7 +11,7 @@ class CustomTestPageController: UIViewController{
     let testSizes = [TestSize.quick,TestSize.small,TestSize.normal,TestSize.full]
     let testDescriptions = [TestSizeDescription.quick,TestSizeDescription.small,TestSizeDescription.normal,TestSizeDescription.full]
     let testType = [Trait.All,Trait.Extraversion,Trait.Openess,Trait.Neuroticism,Trait.Conscientiousness,Trait.Agreeableness]
-    var traitIndex = -1
+    var traitIndex = AppConstants().indexDefaultNumber
     var allTraits = true
     
     
@@ -49,7 +49,7 @@ class CustomTestPageController: UIViewController{
 extension CustomTestPageController: UIPickerViewDelegate, UIPickerViewDataSource{
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+        return constants.defaultNumberOfComponents
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -84,15 +84,15 @@ extension CustomTestPageController: UIPickerViewDelegate, UIPickerViewDataSource
     
     func computeTotalQuestions(){
         let value: Int?
-        if traitIndex == -1 {
+        if traitIndex == constants.indexDefaultNumber {
             allTraits = true
-            value = (6 * numberOfQuestions) * 5
+            value = (constants.numberOfSubtraitsPerTrait * numberOfQuestions) * constants.numberOfTraits
         } else {
             allTraits = false
-           value = 6 * numberOfQuestions
+           value = constants.numberOfSubtraitsPerTrait * numberOfQuestions
         }
     
-            self.totalQuestionsLabel.text = "Total questions selected: \(value!)"
+        self.totalQuestionsLabel.text = "\(constants.totalQuestionsSeleceted) \(value!)"
         
     }
     

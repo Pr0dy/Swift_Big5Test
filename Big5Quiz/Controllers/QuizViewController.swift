@@ -74,20 +74,20 @@ class QuizViewController: UIViewController {
     @IBAction func optionPressed(_ sender: UIButton) {
                 
         switch sender.titleLabel?.text{
-        case "Agree":
-            traitSelect(currentQuestion: testQuestions[currentQuestion], firstScore: 100, lastScore: 0)
+        case constants.agree:
+            traitSelect(currentQuestion: testQuestions[currentQuestion], positiveScore: constants.agreeScores[0], negativeScore: constants.agreeScores[1])
             break
-        case "Moslty Agree":
-            traitSelect(currentQuestion: testQuestions[currentQuestion], firstScore: 75, lastScore: 25)
+        case constants.mostlyAgree:
+            traitSelect(currentQuestion: testQuestions[currentQuestion], positiveScore: constants.mostlyAgreeScores[0], negativeScore: constants.mostlyAgreeScores[1])
             break
-        case "Depends":
-            traitSelect(currentQuestion: testQuestions[currentQuestion], firstScore: 50, lastScore: 50)
+        case constants.depends:
+            traitSelect(currentQuestion: testQuestions[currentQuestion], positiveScore: constants.dependsScores[0], negativeScore: constants.dependsScores[1])
             break
-        case "Mostly Disagree":
-            traitSelect(currentQuestion: testQuestions[currentQuestion], firstScore: 25, lastScore: 75)
+        case constants.mostlyDisagree:
+            traitSelect(currentQuestion: testQuestions[currentQuestion], positiveScore: constants.mostlyAgreeScores[0], negativeScore: constants.mostlyAgreeScores[1])
             break
-        case "Disagree":
-            traitSelect(currentQuestion: testQuestions[currentQuestion], firstScore: 0, lastScore: 100)
+        case constants.disagree:
+            traitSelect(currentQuestion: testQuestions[currentQuestion], positiveScore: constants.disagreeScores[0], negativeScore: constants.disagreeScores[1])
             break
         default: break
         }
@@ -97,13 +97,13 @@ class QuizViewController: UIViewController {
         
     }
     
-    func traitSelect(currentQuestion: Question, firstScore: Int, lastScore: Int){
+    func traitSelect(currentQuestion: Question, positiveScore: Int, negativeScore: Int){
         var score: Int
         
         if currentQuestion.isPositive{
-            score = firstScore
+            score = positiveScore
         } else {
-            score = lastScore
+            score = negativeScore
         }
         
         testScores.updateScore(trait: currentQuestion.questionSubTrait, scoreValue: score)
