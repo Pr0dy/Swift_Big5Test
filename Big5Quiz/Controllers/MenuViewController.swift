@@ -9,6 +9,11 @@ class MenuViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let result = previousTestResults{
+            print("ABCDF")
+        }
+        
     }
     
     // MARK: Button IB Actions
@@ -62,3 +67,5 @@ class MenuViewController: UIViewController{
         }
     }
 }
+
+

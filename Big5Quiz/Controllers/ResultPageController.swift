@@ -76,7 +76,10 @@ class ResultPageController: UIViewController{
       }
     }
         
-        @IBAction func returnButtonPressed(_ sender: UIButton) {            self.navigationController?.popToRootViewController(animated: true)
+        @IBAction func returnButtonPressed(_ sender: UIButton) {
+            let rootVC = navigationController!.viewControllers.first as! MenuViewController
+            rootVC.previousTestResults = self.testScores
+            self.navigationController?.popToRootViewController(animated: true)
         }
 
     }
