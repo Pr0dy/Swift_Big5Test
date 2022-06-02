@@ -20,13 +20,20 @@ struct AppConstants{
     let depends = "Depends"
     let mostlyDisagree = "Mostly Disagree"
     let disagree = "Disagree"
+    let arrowImageName = "arrow.down.app.fill"
+    let big5Label = "The BIG 5 Traits"
     
     // MARK: UI Alert Labels
     let noResultSaved = "No results saved :("
     let noResultMessage = "Make a test then save the results!"
     let alertActionTitle = "Back"
     let notTestedMessage = "Not tested :("
-    
+    let savingResults = "Saving results..."
+    let removingResults = "Removing results..."
+    let saveResults = "Save reults"
+    let removeResults = "Remove results"
+    let sucessfulMessage = "Sucessful!"
+        
     // MARK: Default constants
     let cellHeight = 170
     let numberOfQuickTestQuestions = 3

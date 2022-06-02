@@ -25,16 +25,16 @@ class ResultPageController: UIViewController{
         if showBIG5Page == false {
         self.resultData = ResultData(quizTestScores: testScores!).resultData
         } else {
-            titleLabel.text = "The BIG 5 Traits"
+            titleLabel.text = constants.big5Label
             saveButton.isHidden = true
             
             self.resultData = ResultData(quizTestScores: QuizTestScores()).resultData
         }
         
         if saveResults == false{
-            saveButton.setTitle("Save results", for: .normal)
+            saveButton.setTitle(constants.saveResults, for: .normal)
         } else {
-            saveButton.setTitle("Remove results", for: .normal)
+            saveButton.setTitle(constants.removeResults, for: .normal)
         }
     }
     
@@ -44,7 +44,7 @@ class ResultPageController: UIViewController{
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "Back", style: .cancel, handler: { action in
+        alert.addAction(UIAlertAction(title: constants.alertActionTitle, style: .cancel, handler: { action in
         }))
         
         present(alert,animated: true)
@@ -53,12 +53,12 @@ class ResultPageController: UIViewController{
     @IBAction func pressedSaveResultsButton(_ sender: UIButton) {
         if saveResults == false{
             saveResults = true
-            showAlert(title: "Saving results..", message: "Sucessful!")
-            sender.setTitle("Remove results", for: .normal)
+            showAlert(title: constants.savingResults, message: constants.sucessfulMessage)
+            sender.setTitle(constants.removeResults, for: .normal)
         } else {
             saveResults = false
-            showAlert(title: "Removing results..", message: "Sucessful!")
-            sender.setTitle("Save results", for: .normal)
+            showAlert(title: constants.removingResults, message: constants.sucessfulMessage)
+            sender.setTitle(constants.sucessfulMessage, for: .normal)
 
         }
     }
@@ -110,21 +110,11 @@ class ResultPageController: UIViewController{
             guard let dequeuedCell = tableView.dequeueReusableCell(withIdentifier: constants.resultCellIdentifier, for: indexPath) as? CustomCell else { return UITableViewCell() }
             
             dequeuedCell.selectionStyle = .none
+            dequeuedCell.downImage.image = UIImage(systemName: constants.arrowImageName)
 
-            dequeuedCell.downImage.image = UIImage(systemName: "arrow.down.app.fill")
-            
             dequeuedCell.traitName.text = resultData![indexPath.section].title
             
-            if showBIG5Page == false{
-                if allTraitsQuiz == true || indexPath.section == oneTraitQuizIndex{
-                       dequeuedCell.traitScore.text = traitScoreLabel(score: resultData![indexPath.section].value)
-                } else {
-                    dequeuedCell.traitScore.text = "Not tested :("
-                }
-                    
-            } else {
-                dequeuedCell.traitScore.isHidden = true
-             }
+            cellTextDisplay(isTraitCell: true, indexPath: indexPath, dequeuedCell: dequeuedCell)
         
                 
             dequeuedCell.traitDescription.text =  resultData![indexPath.section].description
@@ -138,9 +128,23 @@ class ResultPageController: UIViewController{
             dequeuedCell.downImage.image = nil
             dequeuedCell.traitName.text = resultData![indexPath.section].data[indexPath.row-1].title
             
+            cellTextDisplay(isTraitCell: false, indexPath: indexPath, dequeuedCell: dequeuedCell)
+            
+            dequeuedCell.traitDescription.text =  resultData![indexPath.section].data[indexPath.row-1].description
+            cellColour(cell: dequeuedCell, trait: resultData![indexPath.section].title)
+        
+            return dequeuedCell
+            }
+        }
+        
+        func cellTextDisplay(isTraitCell: Bool, indexPath: IndexPath, dequeuedCell: CustomCell ){
             if showBIG5Page == false{
                 if allTraitsQuiz == true || indexPath.section == oneTraitQuizIndex{
-                    dequeuedCell.traitScore.text = traitScoreLabel(score: resultData![indexPath.section].data[indexPath.row-1].value)
+                    if isTraitCell == true{
+                        dequeuedCell.traitScore.text = traitScoreLabel(score: resultData![indexPath.section].value)
+                    } else {
+                        dequeuedCell.traitScore.text = traitScoreLabel(score: resultData![indexPath.section].data[indexPath.row-1].value)
+                    }
                 } else {
                 
                     dequeuedCell.traitScore.text = constants.notTestedMessage
@@ -149,12 +153,6 @@ class ResultPageController: UIViewController{
             } else {
                 dequeuedCell.traitScore.isHidden = true
              }
-            
-            dequeuedCell.traitDescription.text =  resultData![indexPath.section].data[indexPath.row-1].description
-            cellColour(cell: dequeuedCell, trait: resultData![indexPath.section].title)
-        
-            return dequeuedCell
-            }
         }
     
     
