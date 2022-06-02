@@ -1,10 +1,11 @@
 import Foundation
 import UIKit
 
-class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDataSource{
-    
+class ResultPageController: UIViewController{
     
     @IBOutlet weak var resultsTable: UITableView!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
     
     let constants = AppConstants()
     var resultData: [TraitData]?
@@ -14,9 +15,6 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
     var allTraitsQuiz = true
     var saveResults = false
     var showBIG5Page = false
-    
-    @IBOutlet weak var saveButton: UIButton!
-    @IBOutlet weak var titleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,12 +36,9 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
         } else {
             saveButton.setTitle("Remove results", for: .normal)
         }
-        
     }
     
-    @IBAction func returnButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: constants.resultPageToMenuSegue, sender: self)
-    }
+    // MARK: UI Alert methods
     
     func showAlert(title: String, message: String){
         
@@ -68,6 +63,7 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
+    // MARK: Segue methods
   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if showBIG5Page == false && segue.identifier == constants.resultPageToMenuSegue{
@@ -79,23 +75,17 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
             }
       }
     }
-    
-    func traitScoreLabel(score: Int) -> String{
-        switch score{
-        case 0...10: return "Extremely Low (\(score))"
-        case 11...20: return "Very Low (\(score))"
-        case 21...30: return "Low (\(score))"
-        case 31...45: return "Below Average (\(score))"
-        case 46...54: return "About Average (\(score))"
-        case 55...69: return "Above Average (\(score))"
-        case 70...79: return "High (\(score))"
-        case 80...89: return "Very High (\(score))"
-        case 90...100: return "Extremely High (\(score))" 
-           default: break
+        
+        @IBAction func returnButtonPressed(_ sender: UIButton) {
+            performSegue(withIdentifier: constants.resultPageToMenuSegue, sender: self)
         }
-        return ""
+
     }
     
+    
+    extension ResultPageController: UITableViewDelegate, UITableViewDataSource{
+
+    // MARK: UITableView methods
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 5
@@ -180,6 +170,24 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         }
     }
+  
+    // MARK: Supporting Methods
+        
+    func traitScoreLabel(score: Int) -> String{
+        switch score{
+        case 0...10: return "Extremely Low (\(score))"
+        case 11...20: return "Very Low (\(score))"
+        case 21...30: return "Low (\(score))"
+        case 31...45: return "Below Average (\(score))"
+        case 46...54: return "About Average (\(score))"
+        case 55...69: return "Above Average (\(score))"
+        case 70...79: return "High (\(score))"
+        case 80...89: return "Very High (\(score))"
+        case 90...100: return "Extremely High (\(score))"
+           default: break
+        }
+        return ""
+    }
     
     func cellColour(cell: CustomCell, trait: String){
         switch trait{
@@ -192,3 +200,5 @@ class ResultPageController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
 }
+
+

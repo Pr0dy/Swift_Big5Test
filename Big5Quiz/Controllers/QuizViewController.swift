@@ -25,16 +25,7 @@ class QuizViewController: UIViewController {
         displayQuestion(questionIndex: 0)
     }
     
-    func selectTrait(traitIndex: Int) -> [[Question]]{
-        switch traitIndex{
-        case 0: return questions.extraversionQuestions
-        case 1: return questions.agreeablenessQuestions
-        case 2: return questions.conscientiounessQuestions
-        case 3: return questions.neuroticismQuestions
-        case 4: return questions.openessQuestions
-        default: return []
-        }
-    }
+    // MARK: Set up quiz methods
     
     func prepareQuiz(){
         if allTraitsQuiz == true{
@@ -63,7 +54,22 @@ class QuizViewController: UIViewController {
             count = 0
         }
     }
+    
+    // MARK: Supporting methods
+    
+    func selectTrait(traitIndex: Int) -> [[Question]]{
+        switch traitIndex{
+        case 0: return questions.extraversionQuestions
+        case 1: return questions.agreeablenessQuestions
+        case 2: return questions.conscientiounessQuestions
+        case 3: return questions.neuroticismQuestions
+        case 4: return questions.openessQuestions
+        default: return []
+        }
+    }
  
+    
+    // MARK: Quiz answers methods
     
     @IBAction func optionPressed(_ sender: UIButton) {
                 
@@ -90,7 +96,20 @@ class QuizViewController: UIViewController {
         displayQuestion(questionIndex: currentQuestion)
         
     }
+    
+    func traitSelect(currentQuestion: Question, firstScore: Int, lastScore: Int){
+        var score: Int
+        
+        if currentQuestion.isPositive{
+            score = firstScore
+        } else {
+            score = lastScore
+        }
+        
+        testScores.updateScore(trait: currentQuestion.questionSubTrait, scoreValue: score)
+    }
 
+    // MARK: Question Display method
     
     func displayQuestion(questionIndex: Int){
         if questionIndex != testQuestions.count{
@@ -106,6 +125,8 @@ class QuizViewController: UIViewController {
             
     }
     
+    // MARK: Segue methods
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == constants.questionsToResultSegue{
@@ -120,18 +141,5 @@ class QuizViewController: UIViewController {
     
     @IBAction func pressedQuitButton(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
-    }
-
-    
-    func traitSelect(currentQuestion: Question, firstScore: Int, lastScore: Int){
-        var score: Int
-        
-        if currentQuestion.isPositive{
-            score = firstScore
-        } else {
-            score = lastScore
-        }
-        
-        testScores.updateScore(trait: currentQuestion.questionSubTrait, scoreValue: score)
     }
 }

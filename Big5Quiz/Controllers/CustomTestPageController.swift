@@ -4,16 +4,9 @@ import UIKit
 class CustomTestPageController: UIViewController{
     
     @IBOutlet weak var totalQuestionsLabel: UILabel!
-    @IBAction func pressedStartTestButton(_ sender: UIButton) {
-        performSegue(withIdentifier: constants.customTestToQuizSegue, sender: self)
-    }
-    
-    @IBAction func pressedReturnButton(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     @IBOutlet weak var pickTestSize: UIPickerView!
     @IBOutlet weak var pickTestTraits: UIPickerView!
+    
     let constants = AppConstants()
     let testSizes = [TestSize.quick,TestSize.small,TestSize.normal,TestSize.full]
     let testDescriptions = [TestSizeDescription.quick,TestSizeDescription.small,TestSizeDescription.normal,TestSizeDescription.full]
@@ -29,8 +22,30 @@ class CustomTestPageController: UIViewController{
         pickTestTraits.delegate = self
         pickTestTraits.dataSource = self
     }
+    
+    // MARK: Segue Methods
+    
+    @IBAction func pressedStartTestButton(_ sender: UIButton) {
+        performSegue(withIdentifier: constants.customTestToQuizSegue, sender: self)
+    }
+    
+    @IBAction func pressedReturnButton(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == constants.customTestToQuizSegue{
+           let nextVC = segue.destination as! QuizViewController
+            nextVC.allTraitsQuiz = true
+            nextVC.oneTraitQuizIndex = self.traitIndex
+            nextVC.testType = constants.customTest
+            nextVC.allTraitsQuiz = self.allTraits
+       }
+    }
 }
     
+// MARK: UIPicker Methods
+
 extension CustomTestPageController: UIPickerViewDelegate, UIPickerViewDataSource{
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -65,6 +80,8 @@ extension CustomTestPageController: UIPickerViewDelegate, UIPickerViewDataSource
         }
     }
     
+    // MARK: Supporting methods
+    
     func computeTotalQuestions(){
         let value: Int?
         if traitIndex == -1 {
@@ -94,16 +111,6 @@ extension CustomTestPageController: UIPickerViewDelegate, UIPickerViewDataSource
         case .Openess:
             return 4
         }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == constants.customTestToQuizSegue{
-           let nextVC = segue.destination as! QuizViewController
-            nextVC.allTraitsQuiz = true
-            nextVC.oneTraitQuizIndex = self.traitIndex
-            nextVC.testType = constants.customTest
-            nextVC.allTraitsQuiz = self.allTraits
-       }
     }
 }
 

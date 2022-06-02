@@ -11,22 +11,7 @@ class MenuViewController: UIViewController{
         super.viewDidLoad()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == constants.mainScreenToQuickQuestionSegue{
-            let nextVC = segue.destination as! QuizViewController
-            nextVC.testType = self.testType
-            numberOfQuestions = constants.numberOfQuickTestQuestions
-        }
-        else if segue.identifier == constants.menuToResultPageSegue{
-            let nextVC = segue.destination as! ResultPageController
-            nextVC.testScores = self.previousTestResults
-            nextVC.saveResults = true
-        }
-        else if segue.identifier == constants.menuToBIG5traitsScreenSegue{
-            let nextVC = segue.destination as! ResultPageController
-            nextVC.showBIG5Page = true
-        }
-    }
+    // MARK: Button IB Actions
     
     @IBAction func pressedQuickTest(_ sender: Any) {
         self.testType = constants.quickTest
@@ -56,5 +41,24 @@ class MenuViewController: UIViewController{
     @IBAction func pressedCustomTestButton(_ sender: UIButton) {
         self.testType = constants.quickTest
         performSegue(withIdentifier: constants.menuToCustomTestSegue, sender: self)
+    }
+    
+    // MARK: Prepare Segue Method
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == constants.mainScreenToQuickQuestionSegue{
+            let nextVC = segue.destination as! QuizViewController
+            nextVC.testType = self.testType
+            numberOfQuestions = constants.numberOfQuickTestQuestions
+        }
+        else if segue.identifier == constants.menuToResultPageSegue{
+            let nextVC = segue.destination as! ResultPageController
+            nextVC.testScores = self.previousTestResults
+            nextVC.saveResults = true
+        }
+        else if segue.identifier == constants.menuToBIG5traitsScreenSegue{
+            let nextVC = segue.destination as! ResultPageController
+            nextVC.showBIG5Page = true
+        }
     }
 }
