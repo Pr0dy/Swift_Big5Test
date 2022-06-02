@@ -39,6 +39,4 @@ struct AppConstants{
     let dependsScores = [50,50]
     let mostlyDisagreeScores = [25,75]
     let disagreeScores = [0,100]
-    
 }
-

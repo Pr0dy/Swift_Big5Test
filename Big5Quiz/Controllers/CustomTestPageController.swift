@@ -30,7 +30,7 @@ class CustomTestPageController: UIViewController{
     }
     
     @IBAction func pressedReturnButton(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -140,6 +140,6 @@ class QuizViewController: UIViewController {
     
     
     @IBAction func pressedQuitButton(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
 }

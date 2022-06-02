@@ -76,8 +76,7 @@ class ResultPageController: UIViewController{
       }
     }
         
-        @IBAction func returnButtonPressed(_ sender: UIButton) {
-            performSegue(withIdentifier: constants.resultPageToMenuSegue, sender: self)
+        @IBAction func returnButtonPressed(_ sender: UIButton) {            self.navigationController?.popToRootViewController(animated: true)
         }
 
     }

@@ -26,7 +26,7 @@ class MenuViewController: UIViewController{
             let alert = UIAlertController(title: constants.noResultSaved, message: constants.noResultMessage, preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: constants.alertActionTitle, style: .cancel, handler: { action in
-            }))
+            })) 
             
             present(alert,animated: true)
         }
